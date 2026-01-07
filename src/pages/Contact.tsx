@@ -48,7 +48,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-foreground mb-8 font-play">
+              <h2 className="text-5xl font-bold text-foreground mb-8 font-play">
                 LET'S <span className="text-secondary">CONNECT</span>
               </h2>
               <div className="space-y-8">
@@ -58,8 +58,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@quantica.gg</p>
-                    <p className="text-muted-foreground">support@quantica.gg</p>
+                    <p className="text-muted-foreground text-xl font-play">info@quantica.gg</p>
+                    <p className="text-muted-foreground text-xl font-play">support@quantica.gg</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -68,8 +68,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
-                    <p className="text-muted-foreground">+91 98765 43211</p>
+                    <p className="text-muted-foreground text-xl font-play">+91 98765 43210</p>
+                    <p className="text-muted-foreground text-xl font-play">+91 98765 43211</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -80,10 +80,10 @@ const Contact = () => {
                     <h3 className="text-foreground font-semibold mb-1">
                       Location
                     </h3>
-                    <p className="text-muted-foreground">
-                      Connaught Place, New Delhi
+                    <p className="text-muted-foreground text-xl font-play">
+                      Rishihood University, Sonipat
                       <br />
-                      Delhi NCR, India - 110001
+                      Delhi NCR, Haryana, India - 131021
                     </p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="border border-primary p-8 clip-corner"
               >
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-5xl font-bold text-foreground mb-6 font-play">
                   SEND A <span className="text-primary">MESSAGE</span>
                 </h3>
                 <div className="space-y-6">
