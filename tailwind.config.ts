@@ -119,6 +119,7 @@ export default {
         "scale-in": "scale-in 0.4s ease-out forwards",
         "slide-up": "slide-up 0.5s ease-out forwards",
         marquee: "marquee 20s linear infinite",
+        "marquee-fast": "marquee 4s linear infinite",
         "glitch-1": "glitch-1 2s infinite linear alternate-reverse",
         "glitch-2": "glitch-2 3s infinite linear alternate-reverse",
       },

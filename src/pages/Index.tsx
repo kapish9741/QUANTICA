@@ -128,9 +128,16 @@ const Index = () => {
           </motion.div>
         </div>
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          onClick={() => {
+            const element = document.getElementById('tournaments');
+            if (element) {
+              const offsetTop = element.offsetTop - 100;
+              window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+          }}
         >
           <ChevronDown className="text-primary hidden md:inline" size={32} />
         </motion.div>
@@ -140,8 +147,8 @@ const Index = () => {
         <div className="hidden sm:block absolute bottom-24 right-8 w-24 h-24 border-r-2 border-b-2 border-primary/30" />
       </section>
       <section className="bg-primary py-4 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap flex">
-          {[...Array(10)].map((_, i) => (
+        <div className="animate-marquee-fast md:animate-marquee whitespace-nowrap flex">
+          {[...Array(20)].map((_, i) => (
             <span
               key={i}
               className="text-primary-foreground font-bold text-lg mx-8 uppercase tracking-wider"
@@ -174,7 +181,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section className="py-24 relative">
+      <section className="py-24 relative" id="tournaments">
         <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
