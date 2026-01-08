@@ -10,7 +10,15 @@ import CountdownTimer from "../components/CountdownTimer";
 import GallerySection from "../components/GallerySection";
 import LiveStreamSection from "../components/LiveStreamSection";
 import PastTournaments from "@/components/PastTournaments";
-import ParallaxGallery from "@/components/ParallaxGallery";
+import FeedbackSection from "@/components/FeedbackSection";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 const events = [
   {
     title: "BGMI 2026",
@@ -22,6 +30,7 @@ const events = [
     image: "https://wstatic-prod-boc.krafton.com/common/content/media/20250507/kcDutagb/33.1_Sanhok_Destruction_KV.jpg",
     slug: "bgmi",
     color: "cyan" as const,
+    registrationUrl: "https://forms.gle/bgmi2026",
   },
   {
     title: "Valorant",
@@ -33,6 +42,7 @@ const events = [
     image: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/f657721a7eb06acae52a29ad3a951f20c1e5fc60-1920x1080.jpg?accountingTag=VAL?auto=format&fit=fill&q=80&w=1082",
     slug: "valorant",
     color: "magenta" as const,
+    registrationUrl: "https://forms.gle/valorant2026",
   },
   {
     title: "Free Fire MAX",
@@ -44,13 +54,27 @@ const events = [
     image: "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/4e48ada584910e68b5ae7a09f3072109.jpg",
     slug: "freefire",
     color: "cyan" as const,
+    registrationUrl: "https://forms.gle/freefire2026",
+  },
+   {
+    title: "EFootball",
+    game: "EFootball",
+    date: "April 20-21, 2026",
+    targetDate: "2026-04-20T10:00:00",
+    prizePool: "₹2,00,000",
+    teams: "48",
+    image: "https://e-football-dl.konami.net/img/efootball_2025/open/title.jpg?v2",
+    slug: "efootball",
+    color: "cyan" as const,
+    status: "Registration Open",
+    registrationUrl: "https://forms.gle/efootball2026",
   },
 ];
 const stats = [
-  { value: "₹10L+", label: "Total Prize Pool" },
+  { value: "₹1.5L+", label: "Total Prize Pool" },
   { value: "144+", label: "Teams Competing" },
   { value: "500+", label: "Players" },
-  { value: "3", label: "Epic Events" },
+  { value: "8", label: "Events" },
 ];
 const Index = () => {
   return (
@@ -154,7 +178,7 @@ const Index = () => {
               key={i}
               className="text-primary-foreground font-bold text-lg mx-8 uppercase tracking-wider"
             >
-              BGMI • VALORANT • FREE FIRE • ESPORTS • DELHI NCR • CHAMPIONSHIP •
+              TOURNAMENT • ESPORTS • CLUTCH • DOMINATE • ESPORTS • DELHI NCR • CHAMPIONSHIP •
             </span>
           ))}
         </div>
@@ -198,11 +222,28 @@ const Index = () => {
               CHOOSE YOUR <span className="text-secondary text-[28px] mt-8 md:text-[48px]">BATTLEFIELD</span>
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <EventCard key={event.slug} {...event} showCountdown />
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+            className="w-full max-w-7xl mx-auto"
+          >
+            <CarouselContent>
+              {events.map((event) => (
+                <CarouselItem key={event.slug} className="md:basis-1/2 lg:basis-1/3 p-4">
+                  <EventCard {...event} showCountdown />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 border-primary text-primary hover:bg-primary hover:text-primary-foreground" />
+            <CarouselNext className="hidden md:flex -right-12 border-primary text-primary hover:bg-primary hover:text-primary-foreground" />
+          </Carousel>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,8 +259,7 @@ const Index = () => {
       <SponsorsSection />
       <LiveStreamSection />
       <PastTournaments />
-      <ParallaxGallery />
-      
+      <FeedbackSection />
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

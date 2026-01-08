@@ -12,6 +12,7 @@ interface EventCardProps {
   slug: string;
   color: "cyan" | "magenta";
   showCountdown?: boolean;
+  registrationUrl?: string;
 }
 const EventCard = ({
   title,
@@ -24,6 +25,7 @@ const EventCard = ({
   slug,
   color,
   showCountdown = false,
+  registrationUrl,
 }: EventCardProps) => {
   const borderColor = color === "cyan" ? "border-primary" : "border-secondary";
   const textColor = color === "cyan" ? "text-primary" : "text-secondary";
@@ -70,13 +72,25 @@ const EventCard = ({
               <span>{teams} Teams</span>
             </div>
           </div>
-          <Link
-            to={`/events/${slug}`}
-            className={`inline-flex items-center gap-2 ${textColor} text-sm font-semibold uppercase tracking-wider group-hover:gap-4 transition-all`}
-          >
-            View Details
-            <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-col gap-3">
+            <Link
+              to={`/events/${slug}`}
+              className={`inline-flex items-center gap-2 ${textColor} text-sm font-semibold uppercase tracking-wider group-hover:gap-4 transition-all`}
+            >
+              View Details
+              <ArrowRight size={16} />
+            </Link>
+            {registrationUrl && (
+              <a
+                href={registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`cyber-btn-outline w-full text-center`}
+              >
+                <span>Register Now</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
