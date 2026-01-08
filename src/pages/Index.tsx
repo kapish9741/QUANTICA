@@ -187,7 +187,7 @@ const Index = () => {
               Upcoming Tournaments
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              CHOOSE YOUR <span className="text-secondary">BATTLEFIELD</span>
+              CHOOSE YOUR <span className="text-secondary text-[28px] mt-8 md:text-[48px]">BATTLEFIELD</span>
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
