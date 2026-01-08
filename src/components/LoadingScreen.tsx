@@ -54,7 +54,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           <div className="relative">
             { }
             <motion.h1
-              className="text-6xl md:text-8xl font-bold text-foreground glitch-intense"
+              className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground glitch-intense"
               data-text="QUANTICA"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
