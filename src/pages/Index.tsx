@@ -47,10 +47,10 @@ const events = [
   },
 ];
 const stats = [
-  { value: "₹10L+", label: "Total Prize Pool" },
+  { value: "₹1.5L+", label: "Total Prize Pool" },
   { value: "144+", label: "Teams Competing" },
   { value: "500+", label: "Players" },
-  { value: "3", label: "Epic Events" },
+  { value: "8", label: "Events" },
 ];
 const Index = () => {
   return (
@@ -154,7 +154,7 @@ const Index = () => {
               key={i}
               className="text-primary-foreground font-bold text-lg mx-8 uppercase tracking-wider"
             >
-              BGMI • VALORANT • FREE FIRE • ESPORTS • DELHI NCR • CHAMPIONSHIP •
+              TOURNAMENT • ESPORTS • CLUTCH • DOMINATE • ESPORTS • DELHI NCR • CHAMPIONSHIP •
             </span>
           ))}
         </div>

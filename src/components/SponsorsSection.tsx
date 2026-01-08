@@ -2,30 +2,52 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 const sponsors = [
 	{
-		name: "Red Bull",
-		logo: "https://www.svgrepo.com/show/303227/redbull-logo.svg",
-	},
-	{
 		name: "Garena",
 		logo: "https://upload.wikimedia.org/wikipedia/en/1/13/GarenaLogo.png",
+		link: "https://www.garena.com",
 	},
 	{
-		name: "Monster Energy",
-		logo: "https://www.hatchwise.com/wp-content/uploads/2024/06/Monster-Energy-Symbol-1024x576.png.webp",
+		name: "ESFI",
+		logo: "https://esfi.in/wp-content/uploads/2020/07/ESFI-Logo.png",
+		link: "https://esfi.in",
+	},
+	{
+		name: "Red Bull",
+		logo: "https://www.svgrepo.com/show/303227/redbull-logo.svg",
+		link: "https://www.redbull.com",
+	},
+	{
+		name: "Meta Nova",
+		logo: "https://via.placeholder.com/300x150?text=Meta+Nova",
+		link: "https://www.meta.com",
+	},
+	{
+		name: "Meta Space",
+		logo: "https://via.placeholder.com/300x150?text=Meta+Space",
+		link: "https://www.meta.com",
+	},
+	{
+		name: "Unstop",
+		logo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guide/logos/Unstop-Logo-Blue-Medium.png",
+		link: "https://unstop.com",
+	},
+	{
+		name: "ASUS",
+		logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg",
+		link: "https://www.asus.com",
+	},
+	{
+		name: "Acer",
+		logo: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Acer_Logo.svg",
+		link: "https://www.acer.com",
 	},
 	{
 		name: "PlayStation",
-		logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/330px-Playstation_logo_colour.svg.png?20160703143304",
-	},
-	{
-		name: "Meta",
-		logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Meta-Logo.png/2560px-Meta-Logo.png",
-	},
-	{
-		name: "SONY",
-		logo: "https://static.vecteezy.com/system/resources/previews/020/975/550/non_2x/sony-logo-sony-icon-transparent-free-png.png",
+		logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg",
+		link: "https://www.playstation.com",
 	},
 ];
+
 const SponsorsSection = () => {
 	const [marqueeDuration, setMarqueeDuration] = useState<number>(() => {
 		if (typeof window === "undefined") return 20;
@@ -38,6 +60,7 @@ const SponsorsSection = () => {
 		const onChange = (e: MediaQueryListEvent | MediaQueryList) => {
 			setMarqueeDuration((e as any).matches ? 40 : 20);
 		};
+		// initialize
 		onChange(mql);
 		if (mql.addEventListener) mql.addEventListener("change", onChange);
 		else mql.addListener(onChange);
@@ -81,16 +104,19 @@ const SponsorsSection = () => {
 					>
 						{[...sponsors, ...sponsors, ...sponsors, ...sponsors].map(
 							(sponsor, index) => (
-								<div
+								<a
 									key={`${sponsor.name}-${index}`}
-									className="flex-shrink-0 mx-8 md:mx-16 w-32 md:w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+									href={sponsor.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex-shrink-0 mx-8 md:mx-16 w-32 md:w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 pointer-events-auto"
 								>
 									<img
 										src={sponsor.logo}
 										alt={sponsor.name}
 										className="max-w-full max-h-full object-contain"
 									/>
-								</div>
+								</a>
 							),
 						)}
 					</motion.div>
@@ -98,7 +124,7 @@ const SponsorsSection = () => {
 				<div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-card to-transparent pointer-events-none" />
 				<div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card to-transparent pointer-events-none" />
 			</div>
-			<div className="container mx-auto px-4 mt-16">
+			{/* <div className="container mx-auto px-4 mt-16">
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -148,7 +174,7 @@ const SponsorsSection = () => {
 						</p>
 					</motion.div>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	);
 };
