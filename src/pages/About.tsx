@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Target, Users, Trophy, Star } from "lucide-react";
 import PageTransition from "../components/PageTransition";
 import GlitchText from "../components/GlitchText";
+import DraggableCardDemo from "../components/Draggable";
+
 const team = [
   {
     name: "Arjun Verma",
@@ -146,8 +148,9 @@ const About = () => {
               OUR <span className="text-secondary">VALUES</span>
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="gap-8">
+            <DraggableCardDemo />
+            {/* {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -164,7 +167,7 @@ const About = () => {
                   {value.description}
                 </p>
               </motion.div>
-            ))}
+            ))} */}
           </div>
         </div>
       </section>

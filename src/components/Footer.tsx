@@ -6,18 +6,25 @@ import { IoMailOpenSharp } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border relative overflow-hidden">
-      { }
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
-      <div className="absolute inset-0 grid-bg opacity-5" />
+    <footer className="relative overflow-hidden border-t border-border">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/FooterBG.png"
+          alt="Footer Background"
+          className="w-full h-full object-cover opacity-15 select-none"
+        />
+        <div className="absolute inset-0" />
+      </div>
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent z-10" />
+      <div className="absolute inset-0 grid-bg opacity-5 z-0" />
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           { }
           <div className="md:col-span-2">
             <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-4 glitch" data-text="QUANTICA">
               QUANTI<span className="text-primary">CA</span>
             </h2>
-            <p className="text-sm md:text-sm text-muted-foreground max-w-md">
+            <p className="text-sm md:text-sm text-muted-foreground max-w-sm">
               Delhi NCR's biggest and first esports tournament. Experience the
               thrill of competitive gaming at its finest with massive prize
               pools and legendary battles.
@@ -49,7 +56,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div>
+          <div className="right-0">
             <h3 className="text-foreground font-semibold mb-4 uppercase tracking-wider text-md md:text-sm">
               Quick Links
             </h3>

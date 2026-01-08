@@ -185,7 +185,7 @@ const LiveStreamSection = () => {
             ))}
 
             <a
-              href="https://www.youtube.com/"
+              href="https://www.youtube.com/@Rishihood"
               target="_blank"
               rel="noopener noreferrer"
               className="glitch-btn flex items-center justify-center gap-2 w-full py-3 bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-all mt-6"
