@@ -7,9 +7,10 @@ import PageTransition from "../components/PageTransition";
 import SponsorsSection from "../components/SponsorsSection";
 import FAQSection from "../components/FAQSection";
 import CountdownTimer from "../components/CountdownTimer";
-import GallerySection from "../components/GallerySection";
+// import GallerySection from "../components/GallerySection";
 import LiveStreamSection from "../components/LiveStreamSection";
 import PastTournaments from "@/components/PastTournaments";
+import ParallaxGallery from "@/components/ParallaxGallery";
 import FeedbackSection from "@/components/FeedbackSection";
 import {
   Carousel,
@@ -259,6 +260,8 @@ const Index = () => {
       <SponsorsSection />
       <LiveStreamSection />
       <PastTournaments />
+      <ParallaxGallery />
+      {/* <GallerySection /> */}
       <FeedbackSection />
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
