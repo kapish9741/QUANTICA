@@ -59,10 +59,18 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
   const [totalScroll, setTotalScroll] = useState(0);
   const [sectionHeight, setSectionHeight] = useState<string>(`300vh`);
   const [rightPadding, setRightPadding] = useState<number>(24);
-
   const [isPinned, setIsPinned] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
 
   useLayoutEffect(() => {
+    if (!isDesktop) return; // Skip calculation on mobile
     const compute = () => {
       const track = trackRef.current;
       const el = targetRef.current;
@@ -83,21 +91,36 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
     compute();
     window.addEventListener("resize", compute);
     return () => window.removeEventListener("resize", compute);
-  }, [items.length]);
+  }, [items.length, isDesktop]);
 
   const { scrollYProgress } = useScroll({ target: targetRef, offset: ["start start", "end start"] });
 
   useEffect(() => {
-    if (!scrollYProgress || typeof scrollYProgress.onChange !== 'function') return;
+    if (!isDesktop || !scrollYProgress || typeof scrollYProgress.onChange !== 'function') return;
     const unsub = scrollYProgress.onChange((v) => {
       setIsPinned(v < 1 - 1e-6);
     });
     return unsub;
-  }, [scrollYProgress]);
+  }, [scrollYProgress, isDesktop]);
+
   const x = useTransform(scrollYProgress, (v) => {
     const t = Math.min(1, Math.max(0, v));
     return -t * totalScroll;
   });
+
+  if (!isDesktop) {
+    return (
+      <section className="relative w-full pb-12">
+        <div className="flex overflow-x-auto gap-6 px-6 pb-8 snap-x snap-mandatory w-full scrollbar-none">
+          {items.map((m) => (
+            <div key={m.slug} className="snap-center shrink-0 first:pl-2 last:pr-6">
+              <MiniCard m={m} />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section ref={targetRef} className="relative" style={{ height: sectionHeight }}>
@@ -236,9 +259,9 @@ const Events = () => {
         </div>
       </section>
       { }
-      <section className="py-8">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-4">
-          <h3 className="text-center text-3xl md:text-6xl font-semibold text-foreground leading-tight mt-24 ">
+          <h3 className="text-center text-3xl md:text-6xl font-semibold text-foreground leading-tight mt-12 md:mt-24 mb-12">
             Mini-Game <span className="text-primary">Showdown</span>
           </h3>
         </div>
