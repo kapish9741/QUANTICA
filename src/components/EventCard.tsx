@@ -83,7 +83,7 @@ const EventCard = ({
               View Details
               <ArrowRight size={16} />
             </Link>
-            {registrationUrl && (
+            {/* {registrationUrl && (
               <a
                 href={registrationUrl}
                 target="_blank"
@@ -92,7 +92,7 @@ const EventCard = ({
               >
                 <span>Register Now</span>
               </a>
-            )}
+            )} */}
           </div>
         </div>
       </div>

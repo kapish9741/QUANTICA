@@ -18,8 +18,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent z-10" />
       <div className="absolute inset-0 grid-bg opacity-5 z-0" />
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          { }
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
           <div className="md:col-span-2">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-3 glitch" data-text="QUANTICA">
               QUANTI<span className="text-primary">CA</span>
@@ -56,7 +55,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="right-0">
+          <div className="md:col-start-4 md:pl-6">
             <h3 className="text-foreground font-semibold mb-4 uppercase tracking-wider text-md md:text-sm">
               Quick Links
             </h3>
@@ -83,6 +82,77 @@ const Footer = () => {
                   className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="md:col-start-5">
+            <h3 className="text-foreground font-semibold mb-4 uppercase tracking-wider text-md md:text-sm">
+              Events
+            </h3>
+            <ul className="flex flex-row gap-4 md:flex-col md:space-y-3">
+              <li>
+                <Link
+                  to="/events/bgmi"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  BGMI
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/valorant"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Valorant
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/freefire"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Free Fire MAX
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/efootball"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  EFOOTBALL
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/takken8"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Takken 8
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/eafootball26"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  EAFC 26
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/f126"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  F1 - 26
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events/clashroyale"
+                  className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Clash Royale
                 </Link>
               </li>
             </ul>
