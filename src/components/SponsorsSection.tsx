@@ -12,16 +12,11 @@ const sponsors = [
 		link: "https://esfi.in",
 		className: "scale-20",
 	},
+
 	{
 		name: "Red Bull",
 		logo: "https://www.svgrepo.com/show/303227/redbull-logo.svg",
 		link: "https://www.redbull.com",
-	},
-	{
-		name: "Meta Nova",
-		logo: "https://metanovaesports.com/wp-content/uploads/2025/12/New-Project-2.png",
-		link: "https://metanovaesports.com/",
-		className: "scale-150",
 	},
 	{
 		name: "Meta Space",
@@ -44,6 +39,12 @@ const sponsors = [
 		name: "Acer",
 		logo: "https://images.acer.com/is/content/acer/acer-4",
 		link: "https://www.acer.com",
+		className: "scale-150",
+	},
+	{
+		name: "Meta Nova",
+		logo: "https://metanovaesports.com/wp-content/uploads/2025/12/New-Project-2.png",
+		link: "https://metanovaesports.com/",
 		className: "scale-150",
 	},
 	{

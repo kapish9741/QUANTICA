@@ -197,8 +197,7 @@ const Events = () => {
               <GlitchText text="ALL EVENTS" />
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Choose your game. Register your team. Compete for glory. All
-              tournaments are held at premium venues across Delhi NCR.
+              Choose your game. Register your team. Compete for glory.
             </p>
           </motion.div>
         </div>

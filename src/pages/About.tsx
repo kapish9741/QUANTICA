@@ -88,7 +88,7 @@ const About = () => {
               About Us
             </p>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8">
-              <GlitchText text="WE ARE QUANTICA" className="text-[40px] md:text-9xl"/>
+              <GlitchText text="WE ARE QUANTICA" className="text-[40px] md:text-9xl" />
             </h1>
             <p className="text-xl text-muted-foreground">
               Delhi NCR's pioneering esports organization, dedicated to
@@ -141,7 +141,7 @@ const About = () => {
             >
               <div className="clip-corner overflow-hidden border border-primary">
                 <img
-                  src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800"
+                  src="https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969916/Screenshot_2026-01-09_at_7.18.44_PM_caxmwt.png"
                   alt="Gaming Setup"
                   className="w-full h-[400px] object-cover"
                 />

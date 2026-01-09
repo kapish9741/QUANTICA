@@ -3,70 +3,80 @@ import { useState, useRef, useEffect } from "react";
 
 const galleryImages = [
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767974506/WhatsApp_Image_2026-01-09_at_16.55.35_m6hwta.jpg",
     title: "BGMI Championship Finals",
     category: "Tournament",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973389/WhatsApp_Image_2026-01-09_at_16.55.37_p1o7ol.jpg",
     title: "Team Celebration",
     category: "Winners",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973327/Screenshot_2026-01-09_at_9.05.31_PM_qo2pcy.png",
     title: "Gaming Arena",
     category: "Venue",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973389/WhatsApp_Image_2026-01-09_at_16.55.38_xjuefk.jpg",
     title: "Live Streaming",
     category: "Production",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969920/Screenshot_2026-01-09_at_7.20.59_PM_hv0pty.png",
     title: "Valorant Action",
     category: "Tournament",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969919/Screenshot_2026-01-09_at_7.20.29_PM_jyqzfd.png",
     title: "Trophy Ceremony",
     category: "Winners",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969917/Screenshot_2026-01-09_at_7.19.05_PM_eeqkoy.png",
     title: "Intense Gameplay",
     category: "Tournament",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969918/Screenshot_2026-01-09_at_7.18.00_PM_jamzso.png",
     title: "Crowd Excitement",
     category: "Venue",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969916/Screenshot_2026-01-09_at_7.18.44_PM_caxmwt.png",
     title: "Pro Players",
     category: "Tournament",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_9.02.22_PM_vjl86g.png",
     title: "Gaming Setup",
     category: "Production",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
-    title: "Esports Stage",
-    category: "Venue",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969917/Screenshot_2026-01-09_at_7.19.54_PM_wjgkxn.png",
+    title: "Strategic Timeout",
+    category: "Strategy",
   },
   {
-    src: "https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=",
-    title: "Championship Match",
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973388/WhatsApp_Image_2026-01-09_at_16.55.33_qa9qpk.jpg",
+    title: "Winning Moment",
+    category: "Winners",
+  },
+  {
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_8.58.59_PM_vojjgg.png",
+    title: "Gamer Focus",
     category: "Tournament",
+  },
+  {
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_8.59.46_PM_d5e7wn.png",
+    title: "Team Spirit",
+    category: "Community",
   },
 ];
 
-const row1Images = [...galleryImages.slice(0, 4), ...galleryImages.slice(0, 4)];
-const row2Images = [...galleryImages.slice(4, 8), ...galleryImages.slice(4, 8)];
-const row3Images = [...galleryImages.slice(8, 12), ...galleryImages.slice(8, 12)];
+const row1Images = [...galleryImages.slice(0, 5), ...galleryImages.slice(0, 5)];
+const row2Images = [...galleryImages.slice(5, 10), ...galleryImages.slice(5, 10)];
+const row3Images = [...galleryImages.slice(10, 14), ...galleryImages.slice(10, 14)];
 
 interface GalleryRowProps {
   images: typeof galleryImages;
@@ -77,11 +87,11 @@ interface GalleryRowProps {
 
 const GalleryRow = ({ images, direction, speed = 40, speedMultiplier }: GalleryRowProps) => {
   const [isPaused, setIsPaused] = useState(false);
-  
+
   const dynamicSpeed = speed / speedMultiplier;
 
   return (
-    <div 
+    <div
       className="relative overflow-hidden py-2"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -117,7 +127,7 @@ const GalleryRow = ({ images, direction, speed = 40, speedMultiplier }: GalleryR
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div>
                   <p className="text-primary text-xs uppercase tracking-wider mb-1 font-bold">
@@ -151,7 +161,7 @@ const InfiniteGallery = () => {
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
 
   const { scrollY } = useScroll();
-  
+
   useEffect(() => {
     let lastScrollY = scrollY.get();
     let lastTime = Date.now();
@@ -160,19 +170,19 @@ const InfiniteGallery = () => {
       const now = Date.now();
       const timeDelta = now - lastTime;
       const scrollDelta = Math.abs(latest - lastScrollY);
-      
+
       const velocity = scrollDelta / timeDelta;
-      
+
       setScrollVelocity(velocity);
-      
+
       if (velocity > 2) {
-        setSpeedMultiplier(3); 
+        setSpeedMultiplier(3);
       } else if (velocity > 1) {
-        setSpeedMultiplier(2); 
+        setSpeedMultiplier(2);
       } else {
-        setSpeedMultiplier(1); 
+        setSpeedMultiplier(1);
       }
-      
+
       lastScrollY = latest;
       lastTime = now;
     });
@@ -192,7 +202,7 @@ const InfiniteGallery = () => {
   return (
     <section ref={sectionRef} className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="container mx-auto px-4 relative z-10 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -214,9 +224,9 @@ const InfiniteGallery = () => {
 
       <div className="relative space-y-4 p-16 pt-10">
         <GalleryRow images={row1Images} direction="left" speed={45} speedMultiplier={speedMultiplier} />
-        
+
         <GalleryRow images={row2Images} direction="right" speed={50} speedMultiplier={speedMultiplier} />
-        
+
         <GalleryRow images={row3Images} direction="left" speed={42} speedMultiplier={speedMultiplier} />
       </div>
 
@@ -226,7 +236,7 @@ const InfiniteGallery = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/20 to-transparent" />
       </div>
-      
+
       <div className="absolute right-0 top-0 bottom-0 w-48 md:w-64 lg:w-80 pointer-events-none z-10">
         <div className="absolute inset-0 bg-gradient-to-l from-background via-background/95 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-l from-background/80 via-background/50 to-transparent" />

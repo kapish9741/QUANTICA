@@ -58,8 +58,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground text-xl font-play">info@quantica.gg</p>
-                    <p className="text-muted-foreground text-xl font-play">support@quantica.gg</p>
+                    <p className="text-muted-foreground text-xl font-play">info@quantica.fun</p>
+                    <p className="text-muted-foreground text-xl font-play">support@quantica.fun</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

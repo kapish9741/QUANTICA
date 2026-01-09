@@ -8,42 +8,42 @@ export function DraggableCardDemo() {
   const items = [
     {
       title: "Excellence",
-      image: "https://gamesbeat.com/wp-content/uploads/2025/05/esl-on.jpg",
+      image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767977877/E-sports_DSC09749_nhemcg.jpg",
     },
     {
       title: "Community",
       image:
-        "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/performance/esports/es-01-stage-hd.jpg?imwidth=1440",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973388/WhatsApp_Image_2026-01-09_at_16.55.36_gffopg.jpg",
     },
     {
       title: "Competition",
       image:
-        "https://c.ndtvimg.com/2024-07/gn5damn_esports_625x300_12_July_24.jpg?im=FitAndFill,algorithm=dnn,width=806,height=605",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969917/Screenshot_2026-01-09_at_7.19.05_PM_eeqkoy.png",
     },
     {
       title: "Innovation",
       image:
-        "https://static.wixstatic.com/media/f99520_e034b77ce9ca463faaf70b4633b021f5~mv2.jpg/v1/fit/w_363,h_2352,q_90,enc_avif,quality_auto/f99520_e034b77ce9ca463faaf70b4633b021f5~mv2.jpg",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969919/Screenshot_2026-01-09_at_7.20.29_PM_jyqzfd.png",
     },
     {
       title: "Gaming",
       image:
-        "https://assets.krafton.in/files/kie-banner.jpg",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767976985/Aaryan_Barthwal_Aug_30_2025_2_uytioq.jpg",
     },
     {
       title: "Fair Play",
       image:
-        "https://static.wixstatic.com/media/f47592_c0bbfb4b44f54991a66416cfce8bff19~mv2.jpg/v1/fit/w_841,h_679,q_90,enc_avif,quality_auto/f47592_c0bbfb4b44f54991a66416cfce8bff19~mv2.jpg",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767974506/WhatsApp_Image_2026-01-09_at_16.55.35_m6hwta.jpg",
     },
     {
       title: "Integrity",
       image:
-        "https://und.edu/blog/_files/images/230927-esports-6267-rss.webp",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969918/Screenshot_2026-01-09_at_7.18.00_PM_jamzso.png",
     },
     {
       title: "Transparency",
       image:
-        "https://ksandk.com/wp-content/uploads/gvbd5btrqea.jpg",
+        "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969916/Screenshot_2026-01-09_at_1.19.09_PM_mefufa.png",
     },
   ];
 

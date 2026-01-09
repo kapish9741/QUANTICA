@@ -256,7 +256,7 @@ const Index = () => {
             >
               <div className="relative clip-corner overflow-hidden">
                 <img
-                  src="https://wallpapers.com/images/hd/gaming-tournaments-2048-x-1365-wallpaper-9fxtxbortr8qimwp.jpg"
+                  src="https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767976978/Screenshot_2026-01-09_at_10.11.12_PM_ukncjf.png"
                   alt="Esports Arena"
                   className="w-full h-96 object-cover"
                 />

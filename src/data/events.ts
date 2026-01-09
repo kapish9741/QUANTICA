@@ -10,6 +10,7 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/bgmi2026",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Battlegrounds_Mobile_India_logo.png",
     },
     {
         title: "Valorant",
@@ -22,6 +23,7 @@ export const events = [
         color: "magenta" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/valorant2026",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg",
     },
     {
         title: "Free Fire MAX",
@@ -34,6 +36,7 @@ export const events = [
         color: "cyan" as const,
         status: "Coming Soon",
         registrationUrl: "https://forms.gle/freefire2026",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Garena_Free_Fire_Logo.svg",
     },
     {
         title: "EFootball",
@@ -46,6 +49,7 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/efootball2026",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/5/52/EFootball_Logo.svg",
     },
     {
         title: "Takken 8",
@@ -58,6 +62,7 @@ export const events = [
         color: "magenta" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/efootball2026",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tekken_8_logo.svg",
     },
     {
         title: "EAFC 26",
@@ -70,6 +75,7 @@ export const events = [
         color: "magenta" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/eafootball26",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/1/13/FC_24_logo.svg",
     },
     {
         title: "F1 - 26",
@@ -82,6 +88,7 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/f126",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg",
     },
     {
         title: "Clash Royale",
@@ -94,5 +101,6 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/clashroyale",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/en/c/c1/Clash_Royale_logo.png",
     },
 ];

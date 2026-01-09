@@ -13,6 +13,7 @@ interface EventCardProps {
   color: "cyan" | "magenta";
   showCountdown?: boolean;
   registrationUrl?: string;
+  gameLogo: string;
 }
 
 const EventCard = ({
@@ -26,6 +27,7 @@ const EventCard = ({
   color,
   showCountdown = false,
   registrationUrl,
+  gameLogo,
 }: EventCardProps) => {
   const borderColor = color === "cyan" ? "border-primary" : "border-secondary";
   const textColor = color === "cyan" ? "text-primary" : "text-secondary";
@@ -48,13 +50,13 @@ const EventCard = ({
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-background/60" />
-          <div className="absolute top-4 left-4">
-            <span
-              className={`${textColor} text-xs font-bold uppercase tracking-wider px-3 py-1 border ${borderColor}`}
-            >
-              {game}
-            </span>
+          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute top-4 left-4 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.8)]">
+            <img
+              src={gameLogo}
+              alt={game}
+              className="w-16 h-16 object-contain"
+            />
           </div>
         </div>
 
