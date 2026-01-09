@@ -50,11 +50,6 @@ const miniGames: MiniGameLite[] = [
     image: "/deadshot.png",
     slug: "deadshot-io",
   },
-  {
-    title: "Deadshot",
-    image: "/deadshot.png",
-    slug: "deadshot-io",
-  },
 ];
 
 
@@ -249,6 +244,7 @@ const Events = () => {
         </div>
         <HorizontalMiniGamesCarousel items={miniGames} />
       </section>
+      { }
       <section className="py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <motion.div
