@@ -145,10 +145,10 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <p className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <p className="text-3xl md:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </p>
-                <p className="text-muted-foreground uppercase tracking-wider text-sm">
+                <p className="text-muted-foreground uppercase tracking-wider text-xs md:text-sm">
                   {stat.label}
                 </p>
               </motion.div>

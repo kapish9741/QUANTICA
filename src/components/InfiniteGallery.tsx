@@ -222,7 +222,7 @@ const InfiniteGallery = () => {
         </motion.div>
       </div>
 
-      <div className="relative space-y-4 p-16 pt-10">
+      <div className="relative space-y-4 md:pt-16 pt-10">
         <GalleryRow images={row1Images} direction="left" speed={45} speedMultiplier={speedMultiplier} />
 
         <GalleryRow images={row2Images} direction="right" speed={50} speedMultiplier={speedMultiplier} />
