@@ -122,7 +122,7 @@ const Index = () => {
         <div className="hidden sm:block absolute bottom-24 right-8 w-24 h-24 border-r-2 border-b-2 border-primary/30" />
       </section>
       <section className="bg-primary py-4 overflow-hidden">
-        <div className="animate-marquee-fast md:animate-marquee whitespace-nowrap flex">
+        <div className="animate-marquee-fast animate-marquee md:animate-marquee whitespace-nowrap flex">
           {[...Array(20)].map((_, i) => (
             <span
               key={i}

@@ -410,7 +410,6 @@
   background: hsl(var(--secondary));
 }
 
-/* Infinite Gallery Animations */
 @keyframes marquee-left {
   0% {
     transform: translateX(0);
@@ -430,7 +429,7 @@
 }
 
 .animate-marquee {
-  animation: marquee-left 30s linear infinite;
+  animation: marquee-left 40s linear infinite;
 }
 
 .animate-marquee-fast {

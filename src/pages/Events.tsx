@@ -7,7 +7,6 @@ import GlitchText from "@/components/GlitchText";
 import { events as allEvents } from "@/data/events";
 import { useRef, useState, useLayoutEffect, useEffect } from "react";
 
-// Lightweight mini-games data (only what we need for visual cards)
 type MiniGameLite = {
   title: string;
   game?: string;
@@ -15,7 +14,6 @@ type MiniGameLite = {
   slug: string;
 };
 
-// curated mini-games (requested list)
 const miniGames: MiniGameLite[] = [
   {
     title: "Super Mario Bros",
@@ -67,10 +65,8 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
   const [sectionHeight, setSectionHeight] = useState<string>(`300vh`);
   const [rightPadding, setRightPadding] = useState<number>(24);
 
-  // Added: whether the track is still pinned (sticky). When false, the track will un-pin and let the page scroll continue.
   const [isPinned, setIsPinned] = useState(true);
 
-  // measure track width and compute scroll length
   useLayoutEffect(() => {
     const compute = () => {
       const track = trackRef.current;
@@ -78,18 +74,13 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
       const vw = window.innerWidth;
       if (track && el) {
         const scrollWidth = track.scrollWidth;
-        // measure left offset of the track (distance from viewport left)
         const trackRect = track.getBoundingClientRect();
         const leftOffset = Math.max(0, trackRect.left);
-        // visible width for the track when stuck at top: viewport minus left offset
         const visibleWidth = Math.max(0, vw - leftOffset);
-        // total horizontal distance we need to translate so last item is fully visible
         const total = Math.max(0, scrollWidth - visibleWidth);
-        // add a small right padding so the last card isn't flush to the edge when translation completes
         const padding = Math.max(24, leftOffset + 24);
         setRightPadding(padding);
         setTotalScroll(total);
-        // section height should be enough vertical scroll to drive the horizontal translation
         const height = total + window.innerHeight;
         setSectionHeight(`${height}px`);
       }
@@ -99,20 +90,15 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
     return () => window.removeEventListener("resize", compute);
   }, [items.length]);
 
-  // start scroll-driven animation as soon as the section's top hits the viewport top
   const { scrollYProgress } = useScroll({ target: targetRef, offset: ["start start", "end start"] });
 
-  // toggle pinned state when we reach the end of the scroll target
   useEffect(() => {
     if (!scrollYProgress || typeof scrollYProgress.onChange !== 'function') return;
     const unsub = scrollYProgress.onChange((v) => {
-      // when progress reaches (or exceeds) 1, un-pin so page scroll continues
       setIsPinned(v < 1 - 1e-6);
     });
     return unsub;
   }, [scrollYProgress]);
-
-  // map vertical progress to pixel translation and clamp so we don't overshoot
   const x = useTransform(scrollYProgress, (v) => {
     const t = Math.min(1, Math.max(0, v));
     return -t * totalScroll;
@@ -120,7 +106,6 @@ const HorizontalMiniGamesCarousel = ({ items }: { items: MiniGameLite[] }) => {
 
   return (
     <section ref={targetRef} className="relative" style={{ height: sectionHeight }}>
-      {/* when pinned we use sticky to pin the content; when unpinned switch to normal flow so page scroll resumes */}
       <div className={isPinned ? "sticky top-0 h-screen flex items-center overflow-hidden" : "relative flex items-center overflow-hidden"}>
         <motion.div
           ref={trackRef}
@@ -144,7 +129,6 @@ const MiniCard = ({ m }: { m: MiniGameLite }) => {
       transition={{ duration: 0.28 }}
       className="group relative w-[280px] sm:w-[320px] md:w-[360px] h-[420px] rounded-xl overflow-hidden shadow-2xl bg-black/10 border-2 border-purple-600/30 hover:border-purple-400/80 transform-gpu transition-all duration-500"
     >
-      {/* soft purple glow behind the card */}
       <div className="absolute -inset-2 rounded-xl blur-3xl opacity-30 pointer-events-none bg-gradient-to-br from-purple-600/30 to-transparent" />
 
       <img
@@ -155,16 +139,12 @@ const MiniCard = ({ m }: { m: MiniGameLite }) => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* scanlines / noise overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(0deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[length:100%_6px]" />
 
-      {/* vignette */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90" />
 
-      {/* purple accent border inside */}
       <div className="absolute inset-1 rounded-lg pointer-events-none" style={{ boxShadow: 'inset 0 0 30px rgba(128,90,241,0.12)' }} />
 
-      {/* title (no glitch layering) */}
       <div className="absolute inset-0 flex items-end p-6">
         <div className="w-full text-left relative">
           <span className="block text-2xl md:text-3xl font-extrabold text-white tracking-wider relative z-20">
@@ -311,7 +291,6 @@ const Events = () => {
                     </p>
                   </div>
 
-                  {/* Glitch Effects */}
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10" />
                   <div className="absolute -inset-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 clip-corner -z-10" />
                 </motion.div>

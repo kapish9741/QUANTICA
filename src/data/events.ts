@@ -10,7 +10,7 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/bgmi2026",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Battlegrounds_Mobile_India_logo.png",
+        gameLogo: "https://trybgmi.com/assets/images/bgmi_logo.webp",
     },
     {
         title: "Valorant",
@@ -36,7 +36,7 @@ export const events = [
         color: "cyan" as const,
         status: "Coming Soon",
         registrationUrl: "https://forms.gle/freefire2026",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Garena_Free_Fire_Logo.svg",
+        gameLogo: "https://www.pngplay.com/wp-content/uploads/10/Garena-Free-Fire-Logo-PNG-Photos.png",
     },
     {
         title: "EFootball",
@@ -49,7 +49,7 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/efootball2026",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/5/52/EFootball_Logo.svg",
+        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/EFootball_2022_logo_colored.svg/2048px-EFootball_2022_logo_colored.svg.png",
     },
     {
         title: "Takken 8",
@@ -62,7 +62,7 @@ export const events = [
         color: "magenta" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/efootball2026",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tekken_8_logo.svg",
+        gameLogo: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/dgs72ru-529a5528-da92-4eb3-a5b8-0f606390feeb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGdzNzJydS01MjlhNTUyOC1kYTkyLTRlYjMtYTViOC0wZjYwNjM5MGZlZWIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pk0wzVW-daWlpUgAbtp4co6Z8dR7c5hhfuJAdB20x_A",
     },
     {
         title: "EAFC 26",
@@ -75,7 +75,7 @@ export const events = [
         color: "magenta" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/eafootball26",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/commons/1/13/FC_24_logo.svg",
+        gameLogo: "https://images.seeklogo.com/logo-png/50/1/ea-sports-fc-logo-png_seeklogo-503896.png",
     },
     {
         title: "F1 - 26",
@@ -101,6 +101,6 @@ export const events = [
         color: "cyan" as const,
         status: "Registration Open",
         registrationUrl: "https://forms.gle/clashroyale",
-        gameLogo: "https://upload.wikimedia.org/wikipedia/en/c/c1/Clash_Royale_logo.png",
+        gameLogo: "https://1000logos.net/wp-content/uploads/2021/02/Clash-Royale-emblem.png",
     },
 ];

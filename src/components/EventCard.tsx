@@ -43,7 +43,6 @@ const EventCard = ({
       <div
         className={`relative overflow-hidden bg-card border ${borderColor} clip-corner`}
       >
-        {/* Image Container */}
         <div className="relative h-48 overflow-hidden">
           <img
             src={image}
@@ -51,7 +50,9 @@ const EventCard = ({
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-background/20" />
-          <div className="absolute top-4 left-4 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.8)]">
+          <div className="absolute top-0 left-0 w-48 h-48 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.95)_0%,transparent_70%)] pointer-events-none" />
+          
+          <div className="absolute top-4 left-4 drop-shadow-[0_16px_32px_rgba(0,0,0,0.85)]">
             <img
               src={gameLogo}
               alt={game}
