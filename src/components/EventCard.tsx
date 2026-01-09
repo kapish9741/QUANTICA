@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, Users, Trophy, ArrowRight } from "lucide-react";
+import { Calendar, Trophy, ArrowRight } from "lucide-react";
+
 interface EventCardProps {
   title: string;
   game: string;
   date: string;
   targetDate: string;
   prizePool: string;
-  teams: string;
   image: string;
   slug: string;
   color: "cyan" | "magenta";
   showCountdown?: boolean;
   registrationUrl?: string;
 }
+
 const EventCard = ({
   title,
   game,
   date,
   targetDate,
   prizePool,
-  teams,
   image,
   slug,
   color,
@@ -29,6 +29,7 @@ const EventCard = ({
 }: EventCardProps) => {
   const borderColor = color === "cyan" ? "border-primary" : "border-secondary";
   const textColor = color === "cyan" ? "text-primary" : "text-secondary";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -40,7 +41,7 @@ const EventCard = ({
       <div
         className={`relative overflow-hidden bg-card border ${borderColor} clip-corner`}
       >
-        { }
+        {/* Image Container */}
         <div className="relative h-48 overflow-hidden">
           <img
             src={image}
@@ -56,8 +57,10 @@ const EventCard = ({
             </span>
           </div>
         </div>
+
         <div className="p-6">
           <h3 className="text-xl font-bold text-foreground mb-4">{title}</h3>
+
           <div className="space-y-3 mb-6">
             <div className="flex items-center gap-3 text-muted-foreground text-sm">
               <Calendar size={16} className={textColor} />
@@ -67,11 +70,8 @@ const EventCard = ({
               <Trophy size={16} className={textColor} />
               <span>Prize Pool: {prizePool}</span>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground text-sm">
-              <Users size={16} className={textColor} />
-              <span>{teams} Teams</span>
-            </div>
           </div>
+
           <div className="flex flex-col gap-3">
             <Link
               to={`/events/${slug}`}
@@ -96,4 +96,5 @@ const EventCard = ({
     </motion.div>
   );
 };
+
 export default EventCard;

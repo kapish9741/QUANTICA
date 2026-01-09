@@ -4,112 +4,7 @@ import { Calendar, Users, Trophy, MapPin } from "lucide-react";
 import PageTransition from "../components/PageTransition";
 import EventCard from "../components/EventCard";
 import GlitchText from "@/components/GlitchText";
-const allEvents = [
-  {
-    title: "BGMI",
-    game: "BGMI",
-    date: "March 15-17, 2026",
-    targetDate: "2026-03-15T10:00:00",
-    prizePool: "₹5,00,000",
-    teams: "64",
-    image: "https://wstatic-prod-boc.krafton.com/common/content/media/20250507/kcDutagb/33.1_Sanhok_Destruction_KV.jpg",
-    slug: "bgmi",
-    color: "cyan" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/bgmi2026",
-  },
-  {
-    title: "Valorant",
-    game: "Valorant",
-    date: "April 5-7, 2026",
-    targetDate: "2026-04-05T11:00:00",
-    prizePool: "₹3,00,000",
-    teams: "32",
-    image: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/f657721a7eb06acae52a29ad3a951f20c1e5fc60-1920x1080.jpg?accountingTag=VAL?auto=format&fit=fill&q=80&w=1082",
-    slug: "valorant",
-    color: "magenta" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/valorant2026",
-  },
-  {
-    title: "Free Fire MAX",
-    game: "Free Fire",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://staticg.sportskeeda.com/editor/2022/12/9e491-16718774849017-1920.jpg",
-    slug: "freefire",
-    color: "cyan" as const,
-    status: "Coming Soon",
-    registrationUrl: "https://forms.gle/freefire2026",
-  },
-  {
-    title: "EFootball",
-    game: "EFootball",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://e-football-dl.konami.net/img/efootball_2025/open/title.jpg?v2",
-    slug: "efootball",
-    color: "cyan" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/efootball2026",
-  },
-  {
-    title: "Takken 8",
-    game: "Takken 8",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://static.bandainamcoent.eu/high/tekken/tekken-8/00-page-setup/TEKKEN8_Header_mobile_2.jpg",
-    slug: "takken8",
-    color: "magenta" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/efootball2026",
-  },
-  {
-    title: "EAFC 26",
-    game: "EAFC 26",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://gaming-cdn.com/images/products/19691/orig/ea-sports-fc-26-pc-ea-app-cover.jpg?v=1758868329",
-    slug: "eafootball26",
-    color: "magenta" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/eafootball26",
-  },
-  {
-    title: "F1 - 26",
-    game: "F1 - 26",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://images.contentstack.io/v3/assets/blte77f57883ea46be1/bltb8b3a6a9562491de/691e0e942bfe5b29e13edfce/F1-EA.jpg?environment=live",
-    slug: "f126",
-    color: "cyan" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/f126",
-  },
-  {
-    title: "Clash Royale",
-    game: "Clash Royale",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://images.ctfassets.net/vfkpgemp7ek3/2414943536/33663d382b3d64d3cbe671a7cb9c2d7f/clash-royale.jpg",
-    slug: "clashroyale",
-    color: "cyan" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/clashroyale",
-  },
-];
+import { events as allEvents } from "@/data/events";
 const Events = () => {
   return (
     <PageTransition>
@@ -151,7 +46,7 @@ const Events = () => {
             </div>
             <div>
               <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-foreground font-semibold">₹10,00,000+</p>
+              <p className="text-foreground font-semibold">₹1,50,000+</p>
               <p className="text-muted-foreground text-sm">Total Prize Pool</p>
             </div>
             <div>
@@ -177,11 +72,10 @@ const Events = () => {
                 <EventCard {...event} />
                 <div className="mt-4">
                   <span
-                    className={`text-xs uppercase tracking-wider px-3 py-1 ${
-                      event.status === "Registration Open"
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground"
-                    }`}
+                    className={`text-xs uppercase tracking-wider px-3 py-1 ${event.status === "Registration Open"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                      }`}
                   >
                     {event.status}
                   </span>
@@ -203,7 +97,7 @@ const Events = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16 font-play tracking-wider">
               HOW TO <GlitchText text="REGISTER" className="text-primary inline-block" />
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-12">
               {[
                 { number: "01", title: "Choose Event", desc: "Select the tournament you want to participate in", color: "bg-primary" },
@@ -220,20 +114,20 @@ const Events = () => {
                   className="group relative"
                 >
                   <div className="relative z-10 bg-background/50 backdrop-blur-sm p-6 border border-border group-hover:border-primary/50 transition-all duration-300 clip-corner h-full flex flex-col items-center">
-                     <div className={`w-20 h-20 ${step.color} text-primary-foreground flex items-center justify-center text-3xl font-bold mb-6 clip-corner shadow-lg group-hover:scale-110 transition-transform duration-300 relative overflow-hidden`}>
-                        <span className="relative z-10 font-mono tracking-widest">{step.number}</span>
-                        <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                     </div>
-                     
-                     <h3 className="text-xl font-bold text-foreground mb-3 font-play uppercase tracking-wide group-hover:text-primary transition-colors">
-                        {step.title}
-                     </h3>
-                     
-                     <p className="text-muted-foreground text-sm leading-relaxed max-w-[200px]">
-                        {step.desc}
-                     </p>
+                    <div className={`w-20 h-20 ${step.color} text-primary-foreground flex items-center justify-center text-3xl font-bold mb-6 clip-corner shadow-lg group-hover:scale-110 transition-transform duration-300 relative overflow-hidden`}>
+                      <span className="relative z-10 font-mono tracking-widest">{step.number}</span>
+                      <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-foreground mb-3 font-play uppercase tracking-wide group-hover:text-primary transition-colors">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed max-w-[200px]">
+                      {step.desc}
+                    </p>
                   </div>
-                  
+
                   {/* Glitch Effects */}
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10" />
                   <div className="absolute -inset-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 clip-corner -z-10" />

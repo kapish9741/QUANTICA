@@ -8,8 +8,9 @@ const sponsors = [
 	},
 	{
 		name: "ESFI",
-		logo: "https://esfi.in/wp-content/uploads/2020/07/ESFI-Logo.png",
+		logo: "https://esportsfederation.in/images/ESFI_Full_logo-White.png",
 		link: "https://esfi.in",
+		className: "scale-20",
 	},
 	{
 		name: "Red Bull",
@@ -18,33 +19,38 @@ const sponsors = [
 	},
 	{
 		name: "Meta Nova",
-		logo: "https://via.placeholder.com/300x150?text=Meta+Nova",
-		link: "https://www.meta.com",
+		logo: "https://metanovaesports.com/wp-content/uploads/2025/12/New-Project-2.png",
+		link: "https://metanovaesports.com/",
+		className: "scale-150",
 	},
 	{
 		name: "Meta Space",
-		logo: "https://via.placeholder.com/300x150?text=Meta+Space",
-		link: "https://www.meta.com",
+		logo: "https://metaspacechain.b-cdn.net/img/logo.png",
+		link: "https://metaspacechain.com/",
 	},
 	{
 		name: "Unstop",
-		logo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guide/logos/Unstop-Logo-Blue-Medium.png",
+		logo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/svg/unstop-logo.svg",
 		link: "https://unstop.com",
+		className: "scale-80",
 	},
 	{
 		name: "ASUS",
 		logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg",
 		link: "https://www.asus.com",
+		className: "brightness-0 invert",
 	},
 	{
 		name: "Acer",
-		logo: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Acer_Logo.svg",
+		logo: "https://images.acer.com/is/content/acer/acer-4",
 		link: "https://www.acer.com",
+		className: "scale-150",
 	},
 	{
 		name: "PlayStation",
 		logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg",
 		link: "https://www.playstation.com",
+		className: "brightness-0 invert",
 	},
 ];
 
@@ -114,7 +120,8 @@ const SponsorsSection = () => {
 									<img
 										src={sponsor.logo}
 										alt={sponsor.name}
-										className="max-w-full max-h-full object-contain"
+										className={`max-w-full max-h-full object-contain ${sponsor.className || ""
+											}`}
 									/>
 								</a>
 							),

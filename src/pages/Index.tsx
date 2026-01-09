@@ -20,57 +20,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-const events = [
-  {
-    title: "BGMI 2026",
-    game: "BGMI",
-    date: "March 15-17, 2026",
-    targetDate: "2026-03-15T10:00:00",
-    prizePool: "₹5,00,000",
-    teams: "64",
-    image: "https://wstatic-prod-boc.krafton.com/common/content/media/20250507/kcDutagb/33.1_Sanhok_Destruction_KV.jpg",
-    slug: "bgmi",
-    color: "cyan" as const,
-    registrationUrl: "https://forms.gle/bgmi2026",
-  },
-  {
-    title: "Valorant",
-    game: "Valorant",
-    date: "April 5-7, 2026",
-    targetDate: "2026-04-05T11:00:00",
-    prizePool: "₹3,00,000",
-    teams: "32",
-    image: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/f657721a7eb06acae52a29ad3a951f20c1e5fc60-1920x1080.jpg?accountingTag=VAL?auto=format&fit=fill&q=80&w=1082",
-    slug: "valorant",
-    color: "magenta" as const,
-    registrationUrl: "https://forms.gle/valorant2026",
-  },
-  {
-    title: "Free Fire MAX",
-    game: "Free Fire",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/4e48ada584910e68b5ae7a09f3072109.jpg",
-    slug: "freefire",
-    color: "cyan" as const,
-    registrationUrl: "https://forms.gle/freefire2026",
-  },
-   {
-    title: "EFootball",
-    game: "EFootball",
-    date: "April 20-21, 2026",
-    targetDate: "2026-04-20T10:00:00",
-    prizePool: "₹2,00,000",
-    teams: "48",
-    image: "https://e-football-dl.konami.net/img/efootball_2025/open/title.jpg?v2",
-    slug: "efootball",
-    color: "cyan" as const,
-    status: "Registration Open",
-    registrationUrl: "https://forms.gle/efootball2026",
-  },
-];
+import { events } from "@/data/events";
 const stats = [
   { value: "₹1.5L+", label: "Total Prize Pool" },
   { value: "144+", label: "Teams Competing" },
@@ -90,7 +40,7 @@ const Index = () => {
             className="w-full h-full object-cover opacity-60"
           >
             <source
-              src="https://res.cloudinary.com/dqh5g2nmn/video/upload/v1762449578/GAMETRAILERF_utywly.mp4"
+              src="https://res.cloudinary.com/dxo4ulvnf/video/upload/v1/Sage_Web_2_svea3j.mp4"
               type="video/mp4"
             />
           </video>
@@ -260,7 +210,7 @@ const Index = () => {
       <SponsorsSection />
       <LiveStreamSection />
       <PastTournaments />
-      <ParallaxGallery />
+      {/* <ParallaxGallery /> */}
       {/* <GallerySection /> */}
       <FeedbackSection />
       <section className="py-24 relative overflow-hidden">

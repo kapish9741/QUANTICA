@@ -6,40 +6,40 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const feedbacks = [
   {
     id: 1,
-    name: "Mortal",
-    role: "Pro Gamer",
+    name: "AnujtooOp",
+    role: "BGMI Esports Player",
     image: "https://upload.wikimedia.org/wikipedia/en/8/8c/Mortal_Kombat_logo.png",
     content: "QUANTICA organizes the smoothest tournaments. Production quality is top-notch!",
     rating: 5,
   },
   {
     id: 2,
-    name: "ScoutOP",
-    role: "IGL",
+    name: "Ritik Yadav",
+    role: "Free Fire Player",
     image: "https://static.wikia.nocookie.net/liquipedia_game_wiki/images/4/4e/Scout.jpg",
     content: "Prize pool distribution is transparent. Best platform for aspiring pros.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Techno",
-    role: "Youtuber",
+    name: "Campuur",
+    role: "BGMI Player",
     image: "https://yt3.googleusercontent.com/ytc/AIdro_kX4K-FjCgR-5uX5Qy07f7q7g5g_5_5_5_5=s900-c-k-c0x00ffffff-no-rj",
     content: "A great platform for showcasing talent. Discovered so many underdog teams.",
     rating: 4,
   },
   {
     id: 4,
-    name: "Jonathan",
-    role: "Athlete",
+    name: "Abhishek Patel",
+    role: "Valorant Player",
     image: "https://static.wikia.nocookie.net/liquipedia_game_wiki/images/6/6f/Jonathan.jpg",
     content: "True LAN environment feel. The energy at QUANTICA events is insane!",
     rating: 5,
   },
   {
     id: 5,
-    name: "Payal",
-    role: "Creator",
+    name: "Aditya Raj",
+    role: "Casual Gamer",
     image: "https://yt3.googleusercontent.com/ytc/AIdro_kX4K-FjCgR-5uX5Qy07f7q7g5g_5_5_5_5=s900-c-k-c0x00ffffff-no-rj",
     content: "Events are always hype and the support team is super responsive.",
     rating: 5,
@@ -69,7 +69,7 @@ const FeedbackSection = () => {
   const getCardStyle = (index: number) => {
     const diff = (index - activeIndex + feedbacks.length) % feedbacks.length;
     const centeredDiff = diff > feedbacks.length / 2 ? diff - feedbacks.length : diff;
-    
+
     if (Math.abs(centeredDiff) > 2) return { opacity: 0, scale: 0, zIndex: -1, x: 0 };
 
     const xOffset = centeredDiff * 60;
@@ -90,7 +90,7 @@ const FeedbackSection = () => {
   return (
     <section className="py-24 relative overflow-hidden bg-background persp-1000">
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4 tracking-wider">
@@ -101,7 +101,7 @@ const FeedbackSection = () => {
           </p>
         </div>
 
-        <div 
+        <div
           className="relative h-[500px] flex items-center justify-center perspective-container"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -122,13 +122,13 @@ const FeedbackSection = () => {
                   transformStyle: "preserve-3d",
                 }}
               >
-                 {isActive && (
-                    <div className="absolute top-2 right-2 flex gap-1">
-                         <div className="w-2 h-2 bg-primary animate-pulse" />
-                         <div className="w-2 h-2 bg-secondary animate-pulse delay-75" />
-                    </div>
-                 )}
-                 
+                {isActive && (
+                  <div className="absolute top-2 right-2 flex gap-1">
+                    <div className="w-2 h-2 bg-primary animate-pulse" />
+                    <div className="w-2 h-2 bg-secondary animate-pulse delay-75" />
+                  </div>
+                )}
+
                 <div className="relative z-10">
                   <Quote className={`w-10 h-10 mb-6 ${isActive ? "text-primary" : "text-muted-foreground"}`} />
                   <p className={`text-base md:text-xl leading-relaxed ${isActive ? "text-foreground" : "text-muted-foreground"}`}>
@@ -138,32 +138,32 @@ const FeedbackSection = () => {
 
                 <div className="mt-auto flex items-center gap-4 pt-6 text-left border-t border-dashed border-white/10">
                   <div className={`relative ${isActive ? "p-[2px] bg-gradient-to-r from-primary to-secondary animate-spin-slow rounded-full" : ""}`}>
-                     <Avatar className="w-12 h-12 border border-background">
-                        <AvatarImage src={feedback.image} alt={feedback.name} />
-                        <AvatarFallback>{feedback.name[0]}</AvatarFallback>
-                      </Avatar>
+                    <Avatar className="w-12 h-12 border border-background">
+                      <AvatarImage src={feedback.image} alt={feedback.name} />
+                      <AvatarFallback>{feedback.name[0]}</AvatarFallback>
+                    </Avatar>
                   </div>
                   <div>
                     <h4 className="font-bold text-xl leading-none">{feedback.name}</h4>
                     <span className="text-xs text-primary uppercase">{feedback.role}</span>
                   </div>
                   <div className="ml-auto flex">
-                     {Array.from({ length: 5 }).map((_, i) => (
-                          <img 
-                            src="/Elements/image copy.png" 
-                            alt="Icon" 
-                            className={`w-8 h-8 mb-6 object-contain ${isActive ? "opacity-100" : "opacity-50 grayscale"}`}
-                            key={i} 
-                          />
-                        ))}
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <img
+                        src="/Elements/image copy.png"
+                        alt="Icon"
+                        className={`w-8 h-8 mb-6 object-contain ${isActive ? "opacity-100" : "opacity-50 grayscale"}`}
+                        key={i}
+                      />
+                    ))}
                   </div>
                 </div>
 
                 {isActive && (
-                    <>
-                        <div className="absolute inset-0 bg-primary/5 pointer-events-none mix-blend-overlay" />
-                        <div className="absolute top-0 left-0 w-full h-[1px] bg-primary/30 animate-scanline pointer-events-none" />
-                    </>
+                  <>
+                    <div className="absolute inset-0 bg-primary/5 pointer-events-none mix-blend-overlay" />
+                    <div className="absolute top-0 left-0 w-full h-[1px] bg-primary/30 animate-scanline pointer-events-none" />
+                  </>
                 )}
               </motion.div>
             );
@@ -180,19 +180,19 @@ const FeedbackSection = () => {
               <ChevronLeft className="w-4 h-4" /> Prev
             </span>
           </button>
-          
+
           <button
             onClick={nextFeedback}
             className="group relative px-6 py-2 font-mono text-sm uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors"
           >
-             <span className="absolute inset-0 border border-muted-foreground/30 -skew-x-12 group-hover:border-primary group-hover:bg-primary/10 transition-colors" />
-             <span className="relative flex items-center gap-2">
-               Next <ChevronRight className="w-4 h-4" />
-             </span>
+            <span className="absolute inset-0 border border-muted-foreground/30 -skew-x-12 group-hover:border-primary group-hover:bg-primary/10 transition-colors" />
+            <span className="relative flex items-center gap-2">
+              Next <ChevronRight className="w-4 h-4" />
+            </span>
           </button>
         </div>
       </div>
-      
+
       <style>{`
         .perspective-container {
             perspective: 1000px;
