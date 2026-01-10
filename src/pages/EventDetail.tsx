@@ -833,7 +833,7 @@ disqualification.
     prizePool: "₹15,000",
     teams: "48",
     format: "1v1",
-    entryFee: "Free",
+    entryFee: "₹150",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036271/fifa_d267yz.jpg",
     color: "cyan",
     registrationUrl: "https://unstop.com/c/sage-rishihood-university-1848390",
