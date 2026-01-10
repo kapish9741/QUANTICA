@@ -26,6 +26,7 @@ const eventData = {
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036375/bgmi_xs2dud.jpg",
     color: "cyan",
+    registrationUrl: "https://unstop.com/o/LAH4Pbq?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹20,000" },
       { place: "2nd Place", prize: "₹12,500" },
@@ -180,6 +181,7 @@ Good luck to all participating teams! Let's have a great tournament. 🏆`
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036269/valorant_wvxtwf.jpg",
     color: "magenta",
+    registrationUrl: "https://unstop.com/o/K3XE1FN?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹10,000" },
       { place: "2nd Place", prize: "₹5,000" },
@@ -409,6 +411,7 @@ within the campus premises
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036270/ff_bclrl6.jpg",
     color: "cyan",
+    registrationUrl: "https://unstop.com/o/sAkQy9Z?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Competitions",
     prizeDistribution: [
       { place: "1st Place", prize: "₹10,000" },
       { place: "2nd Place", prize: "₹6,000" },
@@ -560,6 +563,7 @@ Further please refer to the general rules from ESFI’s rulebook.`,
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036270/efootball_ohpdk8.jpg",
     color: "cyan",
+    registrationUrl: "https://unstop.com/o/2Y96fSD?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹2,500" },
       { place: "2nd Place", prize: "₹1,500" },
@@ -708,6 +712,7 @@ match completion.`,
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036269/tekken_uxsuqn.jpg",
     color: "magenta",
+    registrationUrl: "https://unstop.com/o/TqSZWtY?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹2,500" },
       { place: "2nd Place", prize: "₹1,500" },
@@ -828,9 +833,10 @@ disqualification.
     prizePool: "₹15,000",
     teams: "48",
     format: "1v1",
-    entryFee: "Free",
+    entryFee: "₹150",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036271/fifa_d267yz.jpg",
     color: "cyan",
+    registrationUrl: "https://unstop.com/c/sage-rishihood-university-1848390",
     prizeDistribution: [
       { place: "1st Place", prize: "₹7,500" },
       { place: "2nd Place", prize: "₹4,500" },
@@ -970,6 +976,7 @@ conclusion of a match.`,
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036271/f1_sowdra.jpg",
     color: "magenta",
+    registrationUrl: "https://unstop.com/o/rt2R94J?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹2,000" },
       { place: "2nd Place", prize: "₹1,200" },
@@ -1082,6 +1089,7 @@ disqualification.
     entryFee: "Free",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036374/clashroyale_kjqawu.jpg",
     color: "cyan",
+    registrationUrl: "https://unstop.com/o/gra7Eck?lb=6YYCRAfR&utm_medium=Share&utm_source=sahabsin46468&utm_campaign=Events",
     prizeDistribution: [
       { place: "1st Place", prize: "₹2,500" },
       { place: "2nd Place", prize: "₹1,500" },
