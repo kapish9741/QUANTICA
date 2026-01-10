@@ -9,7 +9,7 @@ const team = [
   {
     name: "Deepanshu Chaudhary",
     role: "Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768044124/IMG_9480_bdbhb9.jpg",
     linkedin: "https://www.linkedin.com/in/deepanshu-chaudhary17/",
     email: "deepanshu.chaudhary2024@nst.rishihood.edu.in",
   },
@@ -30,7 +30,8 @@ const team = [
   {
     name: "Kapish Rohilla",
     role: "Technical Lead",
-    image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768042237/Screenshot_2026-01-10_at_4.16.14_PM_kgcctf.png",
+    // image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768042237/Screenshot_2026-01-10_at_4.16.14_PM_kgcctf.png",
+    image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768044091/Screenshot_2026-01-10_at_4.50.48_PM_dng2eg.png",
     linkedin: "https://www.linkedin.com/in/kapishrohilla/",
     email: "kapish.rohilla2024@nst.rishihood.edu.in",
   },
