@@ -228,7 +228,7 @@ const Events = () => {
         </div>
       </section>
       { }
-      <section className="py-24 relative">
+      <section className="pt-24 pb-12 relative">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-4xl md:text-5xl font-bold text-foreground leading-tight mb-24">
             Choose Your <span className="text-primary text-[32px] md:text-[48px]">GameMode</span>
@@ -259,9 +259,9 @@ const Events = () => {
         </div>
       </section>
       { }
-      <section className="py-12 md:py-24">
+      <section>
         <div className="container mx-auto px-4">
-          <h3 className="text-center text-3xl md:text-6xl font-semibold text-foreground leading-tight mt-12 md:mt-24 mb-12">
+          <h3 className="text-center text-3xl md:text-6xl font-semibold text-foreground leading-tight mt-12 md:mt-24 mb-2">
             Mini-Game <span className="text-primary">Showdown</span>
           </h3>
         </div>
