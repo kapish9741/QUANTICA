@@ -14,7 +14,7 @@ interface Game {
 }
 
 const games: Game[] = [
-    {
+  {
     id: "superbros",
     name: "Super Luigi Bros",
     icon: "https://res.cloudinary.com/dqh5g2nmn/image/upload/v1767979054/mario-8bit_qrnhc1.jpg",
@@ -69,11 +69,11 @@ const GameCartridge = ({ game, onDragStart, onDragEnd }: GameCartridgeProps) => 
         style={{ backgroundColor: game.color + "20" }}
       >
         <div className="absolute top-0 left-0 right-0 h-8 bg-muted/50 border-b-2 border-muted" />
-        
+
         <div className="mt-6 w-16 h-16 flex items-center justify-center">
           {game.icon.startsWith('http') ? (
-            <img 
-              src={game.icon} 
+            <img
+              src={game.icon}
               alt={game.name}
               className="w-full h-full object-contain"
               style={{ imageRendering: 'pixelated' }}
@@ -82,11 +82,11 @@ const GameCartridge = ({ game, onDragStart, onDragEnd }: GameCartridgeProps) => 
             <span className="text-5xl">{game.icon}</span>
           )}
         </div>
-        
+
         <div className="text-xs font-bold text-center px-2 uppercase tracking-wider line-clamp-2" style={{ fontFamily: "'Press Start 2P', monospace" }}>
           {game.name}
         </div>
-        
+
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-3 bg-muted/80" />
       </div>
     </motion.div>
@@ -136,7 +136,7 @@ const PlayArena = () => {
     <PageTransition>
       <section className="min-h-screen pt-24 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-10" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ const PlayArena = () => {
                     />
                   ))}
                 </div>
-                
+
                 <div className="mt-8 p-4 bg-muted/20 border border-muted rounded">
                   <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Press Start 2P', monospace", lineHeight: "1.8" }}>
                     💡 TIP: Drag a cartridge to the TV screen to play!
@@ -193,7 +193,7 @@ const PlayArena = () => {
               <div className="relative">
                 <div className="bg-gradient-to-br from-muted via-muted/80 to-muted/60 p-8 rounded-3xl border-8 border-muted shadow-2xl relative">
                   {isDragging && (
-                    <div 
+                    <div
                       className="absolute inset-0 z-50 bg-black/50 border-4 border-primary rounded-3xl flex items-center justify-center animate-pulse backdrop-blur-sm"
                       onDragOver={handleDragOver}
                       onDrop={handleDrop}
@@ -206,24 +206,23 @@ const PlayArena = () => {
 
                   <div className="mt-4 p-3 bg-red-500/10 border border-red-500/30 rounded text-center">
                     <p className="text-[10px] text-red-400 font-bold uppercase tracking-wide" style={{ fontFamily: "'Press Start 2P', monospace", lineHeight: "1.6" }}>
-                      Disclaimer: The game may take a few minutes to load. Please stay on this page and do not refresh or navigate back while the update is in progress.
+                      Disclaimer: Game may take a few minutes to load. Please do not refresh or go back while it is updating.
                     </p>
                   </div>
 
                   <div
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}
-                    className={`relative aspect-[4/3] bg-black rounded-lg overflow-hidden border-4 ${
-                      isDragging ? "border-primary" : "border-muted/50"
-                    }`}
+                    className={`relative aspect-[4/3] bg-black rounded-lg overflow-hidden border-4 ${isDragging ? "border-primary" : "border-muted/50"
+                      }`}
                   >
                     <div className="absolute inset-0 scanlines opacity-30 pointer-events-none z-20" />
-                    
+
                     <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50 pointer-events-none z-10" />
-                    
+
                     {currentGame ? (
                       <div className="w-full h-full relative">
-                        
+
                         {currentGame.type === 'iframe' && (
                           <iframe
                             key={currentGame.id}
@@ -233,9 +232,9 @@ const PlayArena = () => {
                             allow="gamepad; fullscreen"
                           />
                         )}
-                        
+
                         {currentGame.type === 'emulator' && (
-                          <EmulatorGame 
+                          <EmulatorGame
                             key={currentGame.id}
                             gameUrl={currentGame.url}
                             core={currentGame.core}
@@ -251,8 +250,8 @@ const PlayArena = () => {
                             transition={{ duration: 2, repeat: Infinity }}
                             className="text-6xl mb-4"
                           >
-                            <img 
-                              src="https://static.vecteezy.com/system/resources/thumbnails/011/124/804/small/vintage-television-with-cut-out-screen-on-isolated-png.png" 
+                            <img
+                              src="https://static.vecteezy.com/system/resources/thumbnails/011/124/804/small/vintage-television-with-cut-out-screen-on-isolated-png.png"
                               className="h-24 w-24 mx-auto object-contain"
                               alt="Retro TV"
                             />
@@ -267,19 +266,19 @@ const PlayArena = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="mt-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-2">
                         <div className={`w-3 h-3 rounded-full ${currentGame ? "bg-green-500 animate-pulse" : "bg-red-500"}`} />
                         <span className="text-xs text-muted-foreground uppercase">Power</span>
                       </div>
-                      
+
                       {currentGame && (
                         <div className="flex items-center gap-2">
                           {currentGame.icon.startsWith('http') ? (
-                            <img 
-                              src={currentGame.icon} 
+                            <img
+                              src={currentGame.icon}
                               alt={currentGame.name}
                               className="w-4 h-4 object-contain"
                               style={{ imageRendering: 'pixelated' }}
@@ -293,7 +292,7 @@ const PlayArena = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     <button
                       onClick={handleReset}
                       disabled={!currentGame}
@@ -304,7 +303,7 @@ const PlayArena = () => {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="mx-auto w-32 h-4 bg-muted/60 mt-2 rounded-b-lg" />
                 <div className="mx-auto w-24 h-2 bg-muted/40 rounded-b-lg" />
               </div>

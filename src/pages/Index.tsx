@@ -22,9 +22,9 @@ import Autoplay from "embla-carousel-autoplay";
 import { events } from "@/data/events";
 const stats = [
   { value: "₹1.5L+", label: "Total Prize Pool" },
-  { value: "144+", label: "Teams Competing" },
-  { value: "500+", label: "Players" },
-  { value: "8", label: "Events" },
+  { value: "520+", label: "Teams Competing" },
+  { value: "2000+", label: "Players" },
+  { value: "10+", label: "Events" },
 ];
 const Index = () => {
   return (

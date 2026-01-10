@@ -221,7 +221,7 @@ const Events = () => {
             </div>
             <div>
               <Users className="w-8 h-8 text-secondary mx-auto mb-2" />
-              <p className="text-foreground font-semibold">144+ Teams</p>
+              <p className="text-foreground font-semibold">520+ Teams</p>
               <p className="text-muted-foreground text-sm">Expected</p>
             </div>
           </div>
