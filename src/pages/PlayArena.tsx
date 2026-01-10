@@ -63,9 +63,9 @@ const games: Game[] = [
     type: 'iframe'
   },
   {
-    id: "streetfighter",
-    name: "Street Fighter",
-    icon: "https://res.cloudinary.com/dqh5g2nmn/image/upload/v1768043728/WhatsApp_Image_2026-01-10_at_16.44.17_s30y6b.jpg",
+    id: "pacman",
+    name: "Ms Pacman",
+    icon: "https://i.pinimg.com/1200x/9c/5b/d7/9c5bd79d0a40e6f7394e32996c119c7c.jpg",
     url: "https://www.retrogames.cc/embed/9254-ms-pacman-champion-edition-super-zola-pac-gal.html",
     color: "#f1d117ff",
     type: 'iframe'
