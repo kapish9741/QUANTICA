@@ -75,7 +75,7 @@ const pastTournaments = [
     id: 4,
     title: "Delhi Open Esports",
     game: "E-Football",
-    image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973522/efootball_image_wqdqbc.png",
+    image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767974506/WhatsApp_Image_2026-01-09_at_16.55.35_m6hwta.jpg",
     winner: "Charan",
     prize: "₹10,000",
     date: "Oct 2025",

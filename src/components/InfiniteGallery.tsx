@@ -9,28 +9,28 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973389/WhatsApp_Image_2026-01-09_at_16.55.37_p1o7ol.jpg",
-    title: "Team Celebration",
-    category: "Winners",
-  },
-  {
-    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973327/Screenshot_2026-01-09_at_9.05.31_PM_qo2pcy.png",
-    title: "Gaming Arena",
-    category: "Venue",
-  },
-  {
-    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973389/WhatsApp_Image_2026-01-09_at_16.55.38_xjuefk.jpg",
-    title: "Live Streaming",
-    category: "Production",
-  },
-  {
-    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969920/Screenshot_2026-01-09_at_7.20.59_PM_hv0pty.png",
-    title: "Valorant Action",
+    title: "Sudden Showdown",
     category: "Tournament",
   },
   {
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973327/Screenshot_2026-01-09_at_9.05.31_PM_qo2pcy.png",
+    title: "Live Music Shows",
+    category: "Events",
+  },
+  {
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973389/WhatsApp_Image_2026-01-09_at_16.55.38_xjuefk.jpg",
+    title: "DJ Performance",
+    category: "Events",
+  },
+  {
+    src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969920/Screenshot_2026-01-09_at_7.20.59_PM_hv0pty.png",
+    title: "Redbull Sponsorship",
+    category: "Sponsorship",
+  },
+  {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969919/Screenshot_2026-01-09_at_7.20.29_PM_jyqzfd.png",
-    title: "Trophy Ceremony",
-    category: "Winners",
+    title: "Team Work",
+    category: "Community",
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969917/Screenshot_2026-01-09_at_7.19.05_PM_eeqkoy.png",
@@ -39,8 +39,8 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969918/Screenshot_2026-01-09_at_7.18.00_PM_jamzso.png",
-    title: "Crowd Excitement",
-    category: "Venue",
+    title: "Caffeinated Players",
+    category: "Production",
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969916/Screenshot_2026-01-09_at_7.18.44_PM_caxmwt.png",
@@ -49,8 +49,8 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_9.02.22_PM_vjl86g.png",
-    title: "Gaming Setup",
-    category: "Production",
+    title: "Gaurav Kapoor Live",
+    category: "Events",
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767969917/Screenshot_2026-01-09_at_7.19.54_PM_wjgkxn.png",
@@ -59,18 +59,18 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973388/WhatsApp_Image_2026-01-09_at_16.55.33_qa9qpk.jpg",
-    title: "Winning Moment",
-    category: "Winners",
+    title: "Moments You’ll Carry Forever",
+    category: "Events",
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_8.58.59_PM_vojjgg.png",
-    title: "Gamer Focus",
-    category: "Tournament",
+    title: "Vibe Session",
+    category: "Events",
   },
   {
     src: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1767973316/Screenshot_2026-01-09_at_8.59.46_PM_d5e7wn.png",
-    title: "Team Spirit",
-    category: "Community",
+    title: "Rhythm Live",
+    category: "Events",
   },
 ];
 
