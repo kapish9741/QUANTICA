@@ -125,10 +125,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/events/takken8"
+                  to="/events/tekken8"
                   className="text-sm md:text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Takken 8
+                  Tekken 8
                 </Link>
               </li>
               <li>
