@@ -211,9 +211,9 @@ const Index = () => {
       <PastTournaments />
       <InfiniteGallery />
       <FeedbackSection />
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-6 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -265,7 +265,7 @@ const Index = () => {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-secondary" />
               <div className="absolute -top-6 -left-6 w-32 h-32 border-2 border-primary" />
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
       <FAQSection />

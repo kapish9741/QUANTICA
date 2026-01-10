@@ -228,11 +228,14 @@ const Events = () => {
         </div>
       </section>
       { }
-      <section className="pt-24 pb-12 relative">
+      <section className="pt-24 relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-4xl md:text-5xl font-bold text-foreground leading-tight mb-24">
+          <h2 className="text-center text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
             Choose Your <span className="text-primary text-[32px] md:text-[48px]">GameMode</span>
           </h2>
+          <p className="text-center text-muted-foreground text-md mb-24 uppercase">
+            Powered By <span className="text-secondary">Unstop</span>
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allEvents.map((event, index) => (
               <motion.div
