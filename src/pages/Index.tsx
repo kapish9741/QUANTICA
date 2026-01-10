@@ -74,7 +74,7 @@ const Index = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Powered by SAGE
+            Organized by SAGE
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
