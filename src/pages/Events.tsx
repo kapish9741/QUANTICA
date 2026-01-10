@@ -191,12 +191,20 @@ const Events = () => {
             <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
               Tournaments
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
               <GlitchText text="ALL EVENTS" />
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto pb-8">
               Choose your game. Register your team. Compete for glory.
             </p>
+            <a
+              href="/general-pass"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cyber-btn inline-block"
+            >
+              Buy General Pass
+            </a>
           </motion.div>
         </div>
       </section>

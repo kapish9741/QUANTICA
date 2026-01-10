@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Leaderboard from "./pages/Leaderboard";
 import PlayArena from "./pages/PlayArena";
+import GeneralPass from "./pages/GeneralPass";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/general-pass" element={<GeneralPass />} />
         <Route path="/events/:slug" element={<EventDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
