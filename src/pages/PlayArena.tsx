@@ -206,7 +206,7 @@ const PlayArena = () => {
 
                   <div className="mt-4 p-3 bg-red-500/10 border border-red-500/30 rounded text-center">
                     <p className="text-[10px] text-red-400 font-bold uppercase tracking-wide" style={{ fontFamily: "'Press Start 2P', monospace", lineHeight: "1.6" }}>
-                      Disclaimer: Game may take a few seconds to load. Please do not refresh or go back while it is updating.
+                      Disclaimer: The game may take a few minutes to load. Please stay on this page and do not refresh or navigate back while the update is in progress.
                     </p>
                   </div>
 
