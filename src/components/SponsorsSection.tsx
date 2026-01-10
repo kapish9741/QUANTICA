@@ -9,7 +9,7 @@ const sponsors = [
 	{
 		name: "ESFI",
 		logo: "https://esportsfederation.in/images/ESFI_Full_logo-White.png",
-		link: "https://esfi.in",
+		link: "https://esportsfederation.in/",
 		className: "scale-20",
 	},
 
