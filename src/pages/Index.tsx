@@ -57,7 +57,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-primary uppercase tracking-[0.3em] text-sm mb-6">
-              Delhi NCR's Biggest Esports Tournament
+              Delhi NCR's Biggest Esports Fest
             </p>
           </motion.div>
           <motion.h1
