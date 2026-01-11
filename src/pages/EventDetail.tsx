@@ -836,7 +836,7 @@ disqualification.
     entryFee: "₹150",
     image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036271/fifa_d267yz.jpg",
     color: "cyan",
-    registrationUrl: "https://unstop.com/c/sage-rishihood-university-1848390",
+    registrationUrl: "https://unstop.com/p/quantica-2026-ea-fc-26-solo-cup-quantica-2026-sage-rishihood-university-1621608",
     prizeDistribution: [
       { place: "1st Place", prize: "₹7,500" },
       { place: "2nd Place", prize: "₹4,500" },

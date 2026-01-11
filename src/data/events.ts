@@ -99,8 +99,8 @@ export const events = [
         image: "https://res.cloudinary.com/dxo4ulvnf/image/upload/v1768036271/fifa_d267yz.jpg",
         slug: "eafootball26",
         color: "magenta" as const,
-        status: "Registration Starting Soon",
-        registrationUrl: "https://unstop.com/c/sage-rishihood-university-1848390",
+        status: "Registration Open",
+        registrationUrl: "https://unstop.com/p/quantica-2026-ea-fc-26-solo-cup-quantica-2026-sage-rishihood-university-1621608",
         gameLogo: "https://res.cloudinary.com/dqh5g2nmn/image/upload/v1768044591/ea-sports-fc-26-releases-on-september-26-cover68778afd733aa-removebg-preview_ayg4un.png",
     },
 ];
