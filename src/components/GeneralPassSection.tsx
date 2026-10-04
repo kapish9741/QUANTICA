@@ -25,7 +25,7 @@ const GeneralPassSection = () => {
                         </h2>
 
                         <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            Experience the ultimate esports festival. Watch live matches, participate in mini-games, and enjoy unlimited access to the event zones.
+                            Experience the ultimate esports festival. Relive tournament matches, explore mini-games, and discover all event highlights.
                         </p>
 
                         <ul className="space-y-4 mb-10 text-left max-w-md mx-auto lg:mx-0">

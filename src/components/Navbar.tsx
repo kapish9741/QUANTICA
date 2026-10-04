@@ -48,10 +48,10 @@ const Navbar = () => {
 					</div>
 					{ }
 					<Link
-						to="/events"
+						to="/result"
 						className="hidden md:block cyber-btn text-sm py-3 px-6"
 					>
-						REGISTER NOW
+						VIEW RESULTS
 					</Link>
 					{ }
 					<button
@@ -98,11 +98,11 @@ const Navbar = () => {
 								transition={{ delay: 0.3 }}
 							>
 								<Link
-									to="/events"
+									to="/result"
 									onClick={() => setIsOpen(false)}
 									className="cyber-btn text-center block mt-3 py-3"
 								>
-									REGISTER NOW
+									VIEW RESULTS
 								</Link>
 							</motion.div>
 						</div>

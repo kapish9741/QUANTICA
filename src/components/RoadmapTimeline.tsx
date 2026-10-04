@@ -60,7 +60,7 @@ const RoadmapTimeline = ({ onClose }: RoadmapTimelineProps) => {
         <h2 className="text-3xl md:text-5xl font-bold mb-2 font-play">
           <GlitchText text="TOURNAMENT SCHEDULE" className="text-foreground" />
         </h2>
-        <p className="text-muted-foreground">Follow the action live</p>
+        <p className="text-muted-foreground">Tournament timeline & completed stages</p>
       </motion.div>
 
       <div className="relative space-y-4">

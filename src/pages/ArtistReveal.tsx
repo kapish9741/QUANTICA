@@ -308,7 +308,7 @@ const ArtistReveal = () => {
             {nowPlaying.join(" • ")} • {nowPlaying.join(" • ")}
           </div>
           <div className="absolute bottom-10 left-0 right-0 text-[6vw] uppercase font-bebas tracking-[0.5em] text-white/5 whitespace-nowrap animate-marquee-slow">
-            Signal Live • Signal Live • Signal Live • Signal Live •
+            Concert Highlights • Star Lineup • Concert Highlights • Star Lineup •
           </div>
         </div>
         <motion.div
@@ -379,8 +379,8 @@ const ArtistReveal = () => {
                 <p className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground font-sans mb-2 group-hover:text-white transition-colors">
                   Signal Status
                 </p>
-                <p className="text-lg font-bold text-foreground font-sans">Live Connection</p>
-                <p className="text-xs text-muted-foreground font-sans">Phase 01 Transmission</p>
+                <p className="text-lg font-bold text-foreground font-sans">Fest Lineup</p>
+                <p className="text-xs text-muted-foreground font-sans">Concert Concluded</p>
                 <div className="mt-3 h-1 w-full bg-muted/20 overflow-hidden relative">
                    <motion.div 
                      className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary via-white to-secondary"

@@ -121,9 +121,9 @@ const TournamentBracket = ({ eventSlug, isEditable = false, onMatchUpdate, onTea
 
     return (
         <div className="w-full overflow-x-auto p-4 custom-scrollbar">
-            {eventData?.status === 'ongoing' && !isEditable && (
-                <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-2 text-center text-xs font-bold uppercase tracking-widest animate-pulse mt-4 rounded mb-8 w-fit mx-auto">
-                    ● Event is Live
+            {!isEditable && (
+                <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-2 text-center text-xs font-bold uppercase tracking-widest mt-4 rounded mb-8 w-fit mx-auto">
+                    ● Tournament Completed
                 </div>
             )}
 
@@ -299,11 +299,9 @@ const MatchCard = ({ match, teams, isEditable, onMatchUpdate, isLive, editingTea
     const isBye = !match.team2Id && match.team1Id && match.winnerTeamId === match.team1Id;
 
     return (
-        <div className={`w-[280px] h-[140px] bg-card border rounded-lg overflow-hidden flex flex-col shadow-lg transition-all
-            ${isLive ? 'border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.4)]' : 'border-border/50 hover:border-primary/50'}
-        `}>
+        <div className="w-[280px] h-[140px] bg-card border rounded-lg overflow-hidden flex flex-col shadow-lg transition-all border-border/50 hover:border-primary/50">
             {/* Header */}
-            <div className={`h-8 px-3 flex justify-between items-center bg-black/40 border-b border-border/50 ${isLive ? 'bg-red-500/10' : ''}`}>
+            <div className="h-8 px-3 flex justify-between items-center bg-black/40 border-b border-border/50">
                 <span className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">
                     Match #{match.matchNumber} {isBye && '(BYE)'}
                 </span>
@@ -318,7 +316,11 @@ const MatchCard = ({ match, teams, isEditable, onMatchUpdate, isLive, editingTea
                         <option value="completed">Done</option>
                     </select>
                 ) : (
-                    isLive && <span className="flex items-center gap-1 text-[10px] text-red-500 font-bold animate-pulse"><span className="w-1.5 h-1.5 bg-red-500 rounded-full" /> LIVE</span>
+                    (match?.status === 'completed' || isLive) && (
+                        <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-bold font-mono">
+                            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" /> FINAL
+                        </span>
+                    )
                 )}
             </div>
 

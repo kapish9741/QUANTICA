@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -7,7 +7,6 @@ import EventCard from "../components/EventCard";
 import PageTransition from "../components/PageTransition";
 import SponsorsSection from "../components/SponsorsSection";
 import FAQSection from "../components/FAQSection";
-import CountdownTimer from "../components/CountdownTimer";
 import LiveStreamSection from "../components/LiveStreamSection";
 import PastTournaments from "@/components/PastTournaments";
 import FeedbackSection from "@/components/FeedbackSection";
@@ -23,7 +22,6 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { events } from "@/data/events";
-import { Fireworks } from "fireworks-js";
 
 const stats = [
   { value: "₹1.5L+", label: "Total Prize Pool" },
@@ -34,77 +32,9 @@ const stats = [
 
 const Index = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const [isEventLive, setIsEventLive] = useState(false);
-  const fireworksContainerRef = useRef<HTMLDivElement | null>(null);
-  const fireworkAudioRef = useRef<HTMLAudioElement | null>(null);
-  const fireworksInstanceRef = useRef<Fireworks | null>(null);
-
-  const TARGET_DATE = "2026-02-07T00:00:00";
-  const FIREWORK_AUDIO_URL = "https://ik.imagekit.io/jbckhvkvo/freesound_community-fireworks-close-29630.mp3";
-
-  useEffect(() => {
-    const checkTime = () => {
-      const now = new Date().getTime();
-      const target = new Date(TARGET_DATE).getTime();
-      const distance = target - now;
-      setIsEventLive(distance <= 0);
-
-      if (distance <= 0) {
-        if (fireworksContainerRef.current && !fireworksInstanceRef.current) {
-          const fireworks = new Fireworks(fireworksContainerRef.current, {
-            autoresize: true,
-            opacity: 0.5,
-            acceleration: 1.05,
-            friction: 0.97,
-            gravity: 1.5,
-            particles: 50,
-            traceLength: 3,
-            traceSpeed: 10,
-            explosion: 5,
-            intensity: 30,
-            flickering: 50,
-            lineStyle: 'round',
-            hue: { min: 0, max: 360 },
-            delay: { min: 30, max: 60 },
-            rocketsPoint: { min: 50, max: 50 },
-            lineWidth: { explosion: { min: 1, max: 3 }, trace: { min: 1, max: 2 } },
-            brightness: { min: 50, max: 80 },
-            decay: { min: 0.015, max: 0.03 },
-            mouse: { click: false, move: false, max: 1 }
-          });
-          fireworks.start();
-          fireworksInstanceRef.current = fireworks;
-
-          if (fireworkAudioRef.current) {
-            fireworkAudioRef.current.volume = 1.0;
-            fireworkAudioRef.current.play().catch(console.error);
-          }
-
-          const timeout = setTimeout(() => {
-            fireworks.stop();
-            if (fireworkAudioRef.current) {
-              fireworkAudioRef.current.pause();
-            }
-          }, 15000);
-
-          return () => {
-            clearTimeout(timeout);
-            fireworks.stop();
-          };
-        }
-      }
-    };
-
-    const timer = setInterval(checkTime, 1000);
-    checkTime(); // Initial check
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <PageTransition>
-      <div ref={fireworksContainerRef} className="fixed inset-0 z-50 pointer-events-none" />
-      <audio ref={fireworkAudioRef} src={FIREWORK_AUDIO_URL} preload="auto" playsInline />
       <EventMarquee />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20">
         {/* ... existing video background ... */}
@@ -160,49 +90,19 @@ const Index = () => {
             Organized by SAGE
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mb-12"
-          >
-            {isEventLive ? (
-              <div className="flex flex-col items-center justify-center">
-                <div className="flex items-center gap-4 md:gap-6 mb-4">
-                  <div className="relative flex h-3 w-3 md:h-4 md:w-4">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-red-500"></span>
-                  </div>
-                  <GlitchText
-                    text="LIVE NOW"
-                    className="text-xl md:text-2xl font-bold tracking-widest text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]"
-                  />
-                </div>
-                <p className="text-red-400/80 uppercase tracking-[0.4em] text-xs md:text-[20px] animate-pulse">
-                  Stream is Live Below
-                </p>
-              </div>
-            ) : (
-              <>
-                <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
-                  Next Event Starts In
-                </p>
-                <a href="/countdown">
-                  <CountdownTimer targetDate={TARGET_DATE} color="cyan" />
-                </a>
-              </>
-            )}
-          </motion.div>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <Link to="/events" className="cyber-btn">
-              <span>Register Now</span>
+            <Link to="/recap" className="cyber-btn">
+              <span>See QUANTICA26 Recap</span>
             </Link>
             <Link to="/result" className="cyber-btn-outline">
               <span>View Results</span>
+            </Link>
+            <Link to="/events" className="cyber-btn-outline">
+              <span>Past Events</span>
             </Link>
           </motion.div>
         </div>
@@ -382,7 +282,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
-              Upcoming Tournaments
+              Tournaments
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               CHOOSE YOUR <span className="text-secondary text-[28px] mt-8 md:text-[48px]">BATTLEFIELD</span>
@@ -495,15 +395,20 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              READY TO <span className="text-primary">COMPETE</span>?
+              FEST <span className="text-primary">CONCLUDED</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Register now and secure your spot in Delhi NCR's biggest esports
-              tournament. Glory awaits.
+              QUANTICA 2026 has officially concluded. Huge congratulations to all
+              the champions, finalists, and participants who made this fest historic!
             </p>
-            <Link to="/events" className="cyber-btn text-lg">
-              <span>Register Your Team</span>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/recap" className="cyber-btn text-lg">
+                <span>See QUANTICA26 Recap</span>
+              </Link>
+              <Link to="/result" className="cyber-btn-outline text-lg">
+                <span>View Final Leaderboards</span>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

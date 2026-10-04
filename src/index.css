@@ -721,6 +721,32 @@
   animation: marquee-right 30s linear infinite;
 }
 
+@keyframes vertical-marquee-up {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes vertical-marquee-down {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-vertical-marquee-up {
+  animation: vertical-marquee-up 50s linear infinite;
+}
+
+.animate-vertical-marquee-down {
+  animation: vertical-marquee-down 50s linear infinite;
+}
+
 /* Retro 8-bit Gaming Effects */
 .bg-gradient-radial {
   background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.3) 100%);

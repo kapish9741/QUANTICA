@@ -8,7 +8,7 @@ const streams = [
     title: "BGMI Quantica'26 Day 2",
     platform: "YouTube",
     viewers: "12.5K",
-    isLive: true,
+    isLive: false,
     embedId: "bzYBYL2hbns",
     thumbnail: "https://i.ytimg.com/vi/bzYBYL2hbns/maxresdefault.jpg?v=6986626c&quot",
     channel: "QUANTICA Official",
@@ -18,7 +18,7 @@ const streams = [
     title: "Free Fire MAX Quantica'26 Day 2",
     platform: "YouTube",
     viewers: "8.2K",
-    isLive: true,
+    isLive: false,
     embedId: "9Isfk_p_l7w",
     thumbnail: "https://i.ytimg.com/vi/9Isfk_p_l7w/maxresdefault.jpg?v=6986625b&quot",
     channel: "QUANTICA Esports",
@@ -51,8 +51,8 @@ const LiveStreamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground glitch" data-text="WATCH LIVE">
-            WATCH <span className="text-primary">LIVE</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground glitch" data-text="STREAM REPLAYS">
+            STREAM <span className="text-primary">REPLAYS</span>
           </h2>
         </motion.div>
 
@@ -64,12 +64,10 @@ const LiveStreamSection = () => {
             className="lg:col-span-2"
           >
             <div className="relative clip-corner overflow-hidden bg-card border border-border">
-              {selectedStream.isLive && (
-                <div className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-secondary/90 px-3 py-1">
-                  <span className="w-2 h-2 bg-secondary rounded-full animate-ping" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-secondary-foreground">LIVE</span>
-                </div>
-              )}
+              <div className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-black/80 border border-primary/40 px-3 py-1">
+                <span className="w-2 h-2 bg-primary rounded-full" />
+                <span className="text-xs font-bold uppercase tracking-wider text-primary">STREAM REPLAY</span>
+              </div>
               
 
               {!isPlaying ? (
@@ -156,11 +154,9 @@ const LiveStreamSection = () => {
                     alt={stream.title}
                     className="w-full h-full object-cover"
                   />
-                  {stream.isLive && (
-                    <div className="absolute top-1 left-1 bg-secondary px-1 py-0.5">
-                      <span className="text-[10px] font-bold uppercase text-secondary-foreground">LIVE</span>
-                    </div>
-                  )}
+                  <div className="absolute top-1 left-1 bg-black/80 px-1 py-0.5 border border-primary/30">
+                    <span className="text-[9px] font-bold uppercase text-primary">REPLAY</span>
+                  </div>
                 </div>
                 
                 <div className="flex-1 min-w-0">
@@ -177,7 +173,7 @@ const LiveStreamSection = () => {
               className="glitch-btn cursor-target flex items-center justify-center gap-2 w-full py-3 bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-all mt-6"
             >
               <ExternalLink className="w-4 h-4" />
-              <span className="text-sm uppercase tracking-wider font-bold">View All Streams</span>
+              <span className="text-sm uppercase tracking-wider font-bold">View Stream Archives</span>
             </a>
           </motion.div>
         </div>

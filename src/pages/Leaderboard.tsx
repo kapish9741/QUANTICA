@@ -12,34 +12,8 @@ import { useLeaderboard, Team } from "../hooks/useLeaderboard";
 type Event = typeof events[0];
 type ScheduleEvent = typeof scheduleEvents[0];
 
-const getEventStatus = (scheduleEvent: ScheduleEvent | undefined) => {
-  if (!scheduleEvent) return { status: 'upcoming', label: 'Upcoming', color: 'text-yellow-400', bgColor: 'bg-yellow-500/20', borderColor: 'border-yellow-500/30' };
-
-  const now = new Date();
-
-  // Parse the day format "DD/MM/YY"
-  const [day, month, year] = scheduleEvent.day.split('/').map(Number);
-  const eventDate = new Date(2000 + year, month - 1, day);
-
-  // Parse start and end times
-  const parseTime = (timeStr: string, baseDate: Date) => {
-    const [time, period] = timeStr.split(' ');
-    let [hours, minutes] = time.split(':').map(Number);
-    if (period === 'PM' && hours !== 12) hours += 12;
-    if (period === 'AM' && hours === 12) hours = 0;
-    return new Date(baseDate.getFullYear(), baseDate.getMonth(), baseDate.getDate(), hours, minutes);
-  };
-
-  const startTime = parseTime(scheduleEvent.startTime, eventDate);
-  const endTime = parseTime(scheduleEvent.endTime, eventDate);
-
-  if (now < startTime) {
-    return { status: 'upcoming', label: 'Upcoming', color: 'text-yellow-400', bgColor: 'bg-yellow-500/20', borderColor: 'border-yellow-500/30' };
-  } else if (now >= startTime && now <= endTime) {
-    return { status: 'live', label: 'Live', color: 'text-red-400', bgColor: 'bg-red-500/20', borderColor: 'border-red-500/30' };
-  } else {
-    return { status: 'ended', label: 'Ended', color: 'text-gray-400', bgColor: 'bg-gray-500/20', borderColor: 'border-gray-500/30' };
-  }
+const getEventStatus = (_scheduleEvent: ScheduleEvent | undefined) => {
+  return { status: 'ended', label: 'Completed', color: 'text-gray-400', bgColor: 'bg-gray-500/20', borderColor: 'border-gray-500/30' };
 };
 
 // Hardcoded top 3 data for specific ended events
@@ -225,13 +199,13 @@ const Leaderboard = () => {
                 <Activity className="w-8 h-8 text-primary" />
                 Tournament Hub
               </h2>
-              <p className="text-muted-foreground mt-2">Real-time stats and standings across all events</p>
+              <p className="text-muted-foreground mt-2">Final stats and standings across all completed events</p>
             </div>
             <div className="hidden md:block text-right">
               <div className="text-2xl font-mono font-bold text-primary">
                 {events.length}
               </div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Active Events</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">Total Events</div>
             </div>
           </div>
 
@@ -264,7 +238,6 @@ const Leaderboard = () => {
                       {/* Status Badge */}
                       <div className="absolute top-4 right-4 z-20">
                         <span className={`px-3 py-1 ${statusInfo.bgColor} ${statusInfo.color} border ${statusInfo.borderColor} text-[10px] font-bold uppercase tracking-widest rounded flex items-center gap-2 backdrop-blur-md`}>
-                          {statusInfo.status === 'live' && <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />}
                           {statusInfo.label}
                         </span>
                       </div>
@@ -325,8 +298,6 @@ const Leaderboard = () => {
 
                         <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-xs text-muted-foreground group-hover:text-white transition-colors">
                           <span className={`flex items-center gap-2 font-semibold ${statusInfo.color}`}>
-                            {statusInfo.status === 'live' && <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />}
-                            {statusInfo.status === 'upcoming' && <Clock className="w-3 h-3" />}
                             {statusInfo.label}
                           </span>
                           <span className="uppercase font-bold tracking-wider text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">

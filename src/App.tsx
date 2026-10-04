@@ -29,9 +29,9 @@ import AudioController from "./components/AudioController";
 import GlitchOverlay from "./components/GlitchOverlay";
 import TargetCursor from "./components/TargetCursor";
 import ArtistReveal from "./pages/ArtistReveal";
-import ArtistRevealPopup from "./components/ArtistRevealPopup";
 import MapPage from "./pages/MapPage";
 import Countdown from "./pages/Countdown";
+import QuanticaRecap from "./pages/QuanticaRecap";
 
 const queryClient = new QueryClient();
 const AnimatedRoutes = () => {
@@ -55,6 +55,8 @@ const AnimatedRoutes = () => {
         <Route path="/artist-reveal" element={<ArtistReveal />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/countdown" element={<Countdown />} />
+        <Route path="/recap" element={<QuanticaRecap />} />
+        <Route path="/quantica-recap" element={<QuanticaRecap />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
@@ -146,7 +148,6 @@ const AppContent = () => {
       {showAudioController && <AudioController />}
       <SmoothScroll>
         <Layout />
-        <ArtistRevealPopup />
         <Analytics />
       </SmoothScroll>
     </>

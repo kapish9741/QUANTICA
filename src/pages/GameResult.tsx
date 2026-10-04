@@ -173,11 +173,11 @@ const GameResult = () => {
                     <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-12">
                         <div>
                             <div className="flex items-center gap-3 mb-2">
-                                <span className={`px-2 py-0.5 text-white text-[10px] uppercase font-bold tracking-widest rounded ${loading ? 'bg-yellow-600' : 'bg-red-600 animate-pulse'}`}>
-                                    {loading ? 'Connecting...' : 'Live'}
+                                <span className={`px-2 py-0.5 text-white text-[10px] uppercase font-bold tracking-widest rounded ${loading ? 'bg-yellow-600' : 'bg-emerald-600'}`}>
+                                    {loading ? 'Loading...' : 'Completed'}
                                 </span>
                                 <span className="text-xs text-muted-foreground uppercase tracking-widest flex items-center gap-1">
-                                    <Clock className="w-3 h-3" /> Updated just now
+                                    <Clock className="w-3 h-3" /> Final Results
                                 </span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold uppercase mb-2 leading-none text-white drop-shadow-xl">
@@ -294,7 +294,7 @@ const GameResult = () => {
                                         <Lock className="w-16 h-16 text-yellow-500/50 mb-4" />
                                         <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">Leaderboard Locked</h3>
                                         <p className="text-muted-foreground max-w-md text-lg">
-                                            Leaderboard will be live by <span className="text-yellow-400 font-bold">5:00 AM 8-Feb</span>.
+                                            Leaderboard is finalized.
                                         </p>
                                     </div>
                                 ) : loading && teams.length === 0 ? (

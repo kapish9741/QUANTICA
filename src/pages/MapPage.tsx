@@ -133,13 +133,13 @@ const MapPage = () => {
                 {/* Status HUD */}
                 <div className="absolute top-6 left-6 z-30 bg-black/90 backdrop-blur-md px-4 py-3 rounded-lg border border-white/10 pointer-events-none hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full" />
                     <p className="text-xs text-gray-300 font-mono tracking-wider">
-                      MAP STATUS: <span className="text-green-400 font-bold">LIVE</span>
+                      MAP STATUS: <span className="text-emerald-400 font-bold">COMPLETED</span>
                     </p>
                   </div>
                   <p className="text-[10px] text-gray-500 font-mono">
-                    Interactive Navigation Enabled
+                    Venue Navigation Archive
                   </p>
                 </div>
 

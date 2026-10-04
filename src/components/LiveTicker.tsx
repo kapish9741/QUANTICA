@@ -32,27 +32,15 @@ const LiveTicker = () => {
                 
                 const endDate = new Date(fullYear, month - 1, day, endHours, endMinutes);
 
-                if (now >= startDate && now <= endDate) {
-                    newMessages.push(`LIVE: ${event.title.toUpperCase()} IN PROGRESS | ${event.venue.toUpperCase()}`);
-                } else if (now < startDate) {
-                     // Check if it's within 24 hours to be relevant "UPCOMING"
-                     const diffHours = (startDate.getTime() - now.getTime()) / (1000 * 60 * 60);
-                     if (diffHours < 48) { // Show upcoming for next 48h
-                        const time = startDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-                        newMessages.push(`UPCOMING: ${event.title.toUpperCase()} @ ${time} | ${event.venue.toUpperCase()}`);
-                     }
-                } else {
-                     // Completed
-                     // Only show results for recently completed (e.g., within 24h) or just generic "COMPLETED"
-                     const diffHours = (now.getTime() - endDate.getTime()) / (1000 * 60 * 60);
-                     if (diffHours < 24) {
-                        newMessages.push(`RESULT: ${event.title.toUpperCase()} - COMPLETED`);
-                     }
-                }
+                newMessages.push(`COMPLETED: ${event.title.toUpperCase()} - FINAL RESULTS OUT`);
             });
 
             if (newMessages.length === 0) {
-                 newMessages.push("QUANTICA 2026: THE FUTURE IS NOW", "REGISTER FOR EVENTS NOW");
+                 newMessages.push(
+                     "QUANTICA 2026: FEST CONCLUDED",
+                     "ALL TOURNAMENTS & MATCHES COMPLETED",
+                     "VIEW FINAL LEADERBOARDS & MATCH RESULTS"
+                 );
             }
             
             setMessages(newMessages);
@@ -80,7 +68,7 @@ const LiveTicker = () => {
             >
                 {messages.concat(messages).map((msg, i) => (
                     <span key={i} className="flex items-center gap-2">
-                        <span className={`w-2 h-2 rounded-full animate-pulse ${msg.startsWith('LIVE') ? 'bg-red-500' : 'bg-primary'}`} />
+                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
                         {msg}
                     </span>
                 ))}

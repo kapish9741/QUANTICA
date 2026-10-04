@@ -68,11 +68,40 @@ const EventMarquee = () => {
         return () => clearInterval(interval);
     }, []);
 
-    if (liveEvents.length === 0 && upcomingEvents.length === 0) return null;
+    const completedMessages = [
+        "QUANTICA 2026 CONCLUDED",
+        "ALL TOURNAMENTS & MATCHES COMPLETED",
+        "FINAL RESULTS & LEADERBOARDS ARE OUT",
+        "THANK YOU FOR PARTICIPATING",
+    ];
 
-    // If live events exist, show them all. If only upcoming, show all upcoming for that day.
+    if (liveEvents.length === 0 && upcomingEvents.length === 0) {
+        return (
+            <div className="fixed top-16 md:top-20 left-0 right-0 z-40 mb-20 pointer-events-none">
+                <div className="bg-black/40 backdrop-blur-md border-y border-emerald-500/30 py-2 overflow-hidden flex relative z-10 w-full">
+                    <div className="animate-marquee-slow whitespace-nowrap flex items-center">
+                        {[...Array(6)].map((_, i) => (
+                            <div key={i} className="flex items-center">
+                                {completedMessages.map((msg, index) => (
+                                    <div key={`${i}-${index}`} className="flex items-center gap-4 mx-8">
+                                        <span className="text-sm font-bold tracking-widest text-emerald-400">
+                                            * COMPLETED
+                                        </span>
+                                        <span className="text-white text-sm uppercase tracking-wider font-semibold">
+                                            {msg}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // Fallback if events are populated
     const displayItems = liveEvents.length > 0 ? liveEvents : upcomingEvents;
-    const isLive = liveEvents.length > 0;
 
     return (
         <div className="fixed top-16 md:top-20 left-0 right-0 z-40 mb-20 pointer-events-none">
@@ -82,14 +111,14 @@ const EventMarquee = () => {
                         <div key={i} className="flex items-center">
                             {displayItems.map((item, index) => (
                                 <div key={`${i}-${index}`} className="flex items-center gap-4 mx-8">
-                                    <span className={`text-sm font-bold tracking-widest ${isLive ? 'text-red-500' : 'text-cyan-400'}`}>
-                                        {isLive ? '* LIVE NOW' : '* UPCOMING'}
+                                    <span className="text-sm font-bold tracking-widest text-emerald-400">
+                                        * COMPLETED
                                     </span>
                                     <span className="text-white text-sm uppercase tracking-wider">
                                         {item.title}
                                     </span>
                                     <span className="text-primary/100 text-xs">
-                                        {item.day} {item.startTime}
+                                        {item.day} - Concluded
                                     </span>
                                 </div>
                             ))}
